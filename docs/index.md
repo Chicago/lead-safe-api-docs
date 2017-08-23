@@ -15,7 +15,7 @@ In order to integrate with Lead Safe, the health provider will need to make a RE
 ## API
 
 ### Submitting Prediction
-
+ 
 Submit a patient record and retrieved the estimated probability of having elevated blood-lead levels.
 
 ```bash
@@ -126,7 +126,7 @@ POST {json file} <url>/insert/
 
 #### Header
 
-| Field            | Format       | Constraints      | 
+| Field            | Format       | Constraints      |                                                                                             |
 |------------------|--------------|------------------|---------------------------------------------------------------------------------------------|
 | Date             | Integer      | N/A              | ID of the record submitted.                                                                 |
 | Server           | Text         | "Apache"         | The type of the server providing the results                                                |

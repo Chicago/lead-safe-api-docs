@@ -12,10 +12,15 @@ To access the API, fill out [this form](#) to be contacted by the Chicago Depart
 
 In order to integrate with Lead Safe, the health provider will need to make a REST call against the API. To do so, they will be provided an API token which will provide some authentication. The city will also need to "whitelist" the IP address(es) of the health providers servers.
 
-
 ## API
 
-### Parameters
+### Submitting Prediction
+
+Submit a patient record and retrieved the estimated probability of having elevated blood-lead levels.
+
+```bash
+POST {json file} <url>/insert/
+```
 
 | Field          | Format   | Constraints                                                | Notes/Questions                                                                                                                                                                                                             |
 |----------------|----------|------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,13 +49,60 @@ In order to integrate with Lead Safe, the health provider will need to make a RE
 | lab.route      | Text     | V                                                          | *Always "V"  Veinous for Alliance sites                                                                                                                                                                                     |
 | lab.result     | Text     |                                                            | Several values are possible; integer, non-integer numeric, ranges indicated by alphanumeric text.  We'll use previous examples to essentially construct a dictionary.                                                       |
 
-#### Example Call
-
-```shell
-POST 
+```json
+{
+  "timestamp": "2017-08-22 12:00:00.000000", 
+  "clinic_id": "EF",
+  "location_id": "examp_loc",
+  "alliance_id": 9000, 
+  "address1": "333 S State St", 
+  "address2": "Ste 420", 
+  "city": "Chicago", 
+  "state": "IL", 
+  "zip": "60653", 
+  "date_of_birth": "2013-07-24", 
+  "gender": "F", 
+  "race": "2054-5", 
+  "ethnicity": "2186-5",
+  "visit": [
+    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"},
+    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}
+  ],
+  "lab": [
+    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 5.0, "result": "None Detected ug/dL", "date": "2016-07-29", "type": "BLL"}, 
+    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 5.0, "result": "1", "date": "2015-08-21", "type": "BLL"}, 
+    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 5.0, "result": "1", "date": "2015-02-27", "type": "BLL"}, 
+    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 5.0, "result": "1", "date": "2014-06-06", "type": "BLL"}, 
+    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "3", "date": "2014-09-29", "type": "BLL"}, 
+    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "4.1", "date": "2014-01-09", "type": "BLL"}, 
+    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "4.1", "date": "2013-06-28", "type": "BLL"}, 
+    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "6.3", "date": "2013-03-13", "type": "BLL"}, 
+    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "9.7", "date": "2012-10-02", "type": "BLL"}, 
+    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "16.3", "date": "2012-06-19", "type": "BLL"}, 
+    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "3", "date": "2016-09-16", "type": "BLL"}, 
+    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "3", "date": "2015-12-15", "type": "BLL"}, 
+    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "3", "date": "2015-06-09", "type": "BLL"}, 
+    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "13.6", "date": "2012-03-20", "type": "BLL"}, 
+    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "15", "date": "2012-02-21", "type": "BLL"}, 
+    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "5", "date": "2011-08-19", "type": "BLL"}] 
+}
 ```
 
-### Response Parameters
+### Response
+
+#### Body
 
 | Field            | Format       | Constraints                                                                     | Notes/Questions                                                                                  |
 |------------------|--------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
@@ -61,16 +113,78 @@ POST
 | risk_score       | AlphaNumeric | 9.99                                                                            | Currently expecting numeric, future may be phrased by stating an odds ratio with the risk score. |
 | risk_score_notes | Text         | Additional notes (referral, remediation funds, etc to be returned to provider ) |                                                                                                  |
 
-#### Sample Response
-
 ```json
 {
     "risk_score": "0.309", 
     "risk_score_notes": "Risk Score Notes", 
     "visit_date": "2017-07-25", 
-    "version": "0.0.1", 
+    "version": "0.3.0", 
     "alliance_id": 6425, 
     "timestamp": "2017-08-11 19:20:29"}
+}
+```
+
+#### Header
+
+| Field            | Format       | Constraints      | 
+|------------------|--------------|------------------|---------------------------------------------------------------------------------------------|
+| Date             | Integer      | N/A              | ID of the record submitted.                                                                 |
+| Server           | Text         | "Apache"         | The type of the server providing the results                                                |
+| Content-Location | URL          |                  | Pernament location to retrieve the results                                                  |
+| ETag             |              |                  |                                                                                             |
+| Content-Length   | Integer      | 225              |                                                                                             |
+| Content-Type     | Text         | application/json | Informs user that the content will be a JSON file                                           |
+| Set-Cookie       | Text         |                  |                                                                                             |
+
+```
+HTTP/1.1 200 OK
+Date: Tue, 22 Aug 2017 22:49:39 GMT
+Server: Apache
+Content-Location: https://webapps1int.cityofchicago.org/ords/cdph_lead_api/test_result/get/406
+ETag: "zi/wQ5GvoQFjvb4ej24v8f5PbHog14ZsjDSGJABXUxKxV3SxyOwBKrNJv7we9B5hnSs9WgeoA2h54/yVmIjcnA=="
+Content-Length: 225
+Content-Type: application/json
+Set-Cookie: BIGipServerwebapps1int.cityofchicago.org-443.app~webapps1int.cityofchicago.org-443_pool=339105802.47873.0000; Secure; HttpOnly; path=/; Httponly; Secure
+```
+
+
+### Retrieving Previous Predictions
+
+When submitting a record for a prediction, a unique URL is given to the submission (not the individual) where the results can be retrieved in the future. 
+
+```bash
+GET <url>/get/{id}
+```
+
+The response will be the [same as the original prediction](#body).
+
+!!! note ""
+    The prediction is only assigned when it is POST to the server. The score will only reflect the prediction given the data originally submitted and based on known information at that time. Retrieving old records will not update the prediction. To get a new prediction, submit a new record
+
+
+### Checking Status on All Submissions
+
+Check the status on all submissions and whether results are available.
+
+```bash
+GET <url>/get/
+```
+
+##### Response
+
+| Field       | Format       | Constraints    | 
+|-------------|--------------|----------------|--------------------------------------------------------------------------------------------------|
+| id          | Integer      | N/A            | ID of the record submitted.                                                                      |
+| processed   | Text         | "Y" or "N"     | Whether the results are available. Results may be an error or blank if the record was incorrect. |
+
+```json
+{"items":[
+  {"id":133,"processed":"Y"},
+  {"id":121,"processed":"Y"},
+  {"id":120,"processed":"Y"},
+  {"id":122,"processed":"Y"},
+  {"id":123,"processed":"Y"}
+  ]
 }
 ```
 

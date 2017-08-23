@@ -120,7 +120,7 @@ POST {json file} <url>/insert/
     "visit_date": "2017-07-25", 
     "version": "0.3.0", 
     "alliance_id": 6425, 
-    "timestamp": "2017-08-11 19:20:29"}
+    "timestamp": "2017-08-11 19:20:29"
 }
 ```
 

@@ -106,7 +106,7 @@ POST {json file} <url>/insert/
 
 | Field            | Format       | Constraints                                                                     | Notes/Questions                                                                                  |
 |------------------|--------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| version          | Text         | "0.2.1"                                                                         | Follows Semantic Versioning 2.0.0 http://semver.org/spec/v2.0.0.html                             |
+| version          | Text         | "0.3.0"                                                                         | Follows Semantic Versioning 2.0.0 http://semver.org/spec/v2.0.0.html                             |
 | timestamp        | TimeDate     | yyyy-mm-ddThh:mm:ss.sss-hh:mm                                                   | Current Timestamp. RFC 3339 (ISO 8601 derivative).                                               |
 | visit_date       | Date         | yyyy-mm-dd                                                                      | Effective date of score                                                                          |
 | alliance_id      | Text         | AlphaNumeric                                                                    | Return value provided by Feed                                                                    |

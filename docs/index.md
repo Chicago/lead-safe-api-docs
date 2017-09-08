@@ -35,7 +35,7 @@ POST {json file} <url>/insert/
 | zip            | Text     | 5 digit zip code                                           | patientprofile.Zip                                                                                                |
 | date_of_birth  | Date     | yyyy-mm-dd                                                 |                                                                                                                   |
 | gender         | Text     | M/F/U                                                      |                                                                                                                   |
-| race           | Text     | Code Values from Centricity                                | Standard ONC Race definitions <br>  <br> **Code / description** <br> 1002-5 / American Indian or Alaska Native <br> 2028-9 / Asian <br> 2054-5 / Black or African American <br> 2076-8 / Native Hawaiian or Other Pacific Islander <br> 2106-3 / White <br> UNK / Unknown |
+| race           | Text     | Code Values from Centricity                                | Standard ONC Race definitions <br> <br> **Code / description** <br> 1002-5 / American Indian or Alaska Native <br> 2028-9 / Asian <br> 2054-5 / Black or African American <br> 2076-8 / Native Hawaiian or Other Pacific Islander <br> 2106-3 / White <br> UNK / Unknown |
 | ethnicity      | Text     | Code Values from Centricity                                | Standard ONC Ethnicity definitions <br> <br> **Code / description** <br> 2135-2 / Hispanic or Latino <br> 2186-5 / Non Hispanic or Latino <br> UNK / Unknown |
 | Visit Array    |          |                                                            |                                                                                                                                                                                                            |
 | visit.visit_id | Numeric  | 16 Digit GE ID                                             | Unique GE ID for specific visit  (DocumentID)                                                                     |
@@ -51,7 +51,7 @@ POST {json file} <url>/insert/
 
 ```json
 {
-  "timestamp": "2017-08-22 12:00:00.000000", 
+  "timestamp": "2017-08-22 12:00:00.00+00:00", 
   "clinic_id": "EF",
   "location_id": "examp_loc",
   "alliance_id": 9000, 
@@ -120,7 +120,7 @@ POST {json file} <url>/insert/
     "visit_date": "2017-07-25", 
     "version": "0.3.0", 
     "alliance_id": 6425, 
-    "timestamp": "2017-08-11 19:20:29"
+    "timestamp": "2017-08-11 19:20:29.00+00:00"
 }
 ```
 

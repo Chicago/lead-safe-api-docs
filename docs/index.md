@@ -24,7 +24,7 @@ POST {json file} <url>/insert/
 
 | Field          | Format   | Constraints                                                | Notes/Questions                                                                                                   |
 |----------------|----------|------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| timestamp      | TimeDate | yyyy-mm-dd hh:mm:ss.sss-hh.mm                              | Current Timestamp. RFC 3339 (ISO 8601 derivative).                                                                |
+| timestamp      | TimeDate | yyyy-mm-dd hh:mm:ss.sss-hh:mm                              | Current Timestamp. RFC 3339 (ISO 8601 derivative).                                                                |
 | clinic_id      | Text     |                                                            | Two Characted Organization ID (NN- NearNorth  EF- ErieFamily)                                                     |
 | location_id    | Text     |                                                            | Specific Location Abbreviation in Centricity                                                                      |
 | patient_id     | Text     | AlphaNumeric                                               | A id to identify individual patients, should be unique with secondary key.                                        |
@@ -51,7 +51,7 @@ POST {json file} <url>/insert/
 
 ```json
 {
-  "timestamp": "2017-08-22 12:00:00.00+00:00", 
+  "timestamp": "2017-08-22 12:00:00.000-00:00", 
   "clinic_id": "EF",
   "location_id": "examp_loc",
   "alliance_id": 9000, 
@@ -65,20 +65,20 @@ POST {json file} <url>/insert/
   "race": "2054-5", 
   "ethnicity": "2186-5",
   "visit": [
-    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"},
-    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171755", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}
+    {"date": "2017-07-25", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"},
+    {"date": "2017-07-25", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
+    {"date": "2017-07-25", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}
   ],
   "lab": [
     {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 5.0, "result": "None Detected ug/dL", "date": "2016-07-29", "type": "BLL"}, 
@@ -120,7 +120,7 @@ POST {json file} <url>/insert/
     "visit_date": "2017-07-25", 
     "version": "0.3.0", 
     "alliance_id": 6425, 
-    "timestamp": "2017-08-11 19:20:29.00+00:00"
+    "timestamp": "2017-08-11 19:20:29.000-00:00"
 }
 ```
 

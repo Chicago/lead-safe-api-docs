@@ -48,7 +48,7 @@ POST {json file} <url>/insert/
 | lab.lab_id      | Numeric  | 16 Digit GE ID                                             | Unique GE ID for specific lab result (ObsID)                                                                      |
 | lab.type        | Text     | BLL                                                        | Static BLL unless we identify additional labs to include                                                          |
 | lab.date        | Date     | yyyy-mm-dd                                                 |                                                                                                                   |
-| lab.sample_type | Text     | "V" or "C"                                                 | *Always "V"  Veinous for Alliance sites                                                                           |
+| lab.sample_type | Text     | "V" or "C"                                                 | "V" Veinous or "C" for Capillary                                                                                  |
 | lab.result      | Text     |                                                            | Several values are possible; integer, non-integer numeric, ranges indicated by alphanumeric text.  We'll use previous examples to essentially construct a dictionary. |
 
 ```json

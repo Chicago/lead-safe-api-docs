@@ -56,7 +56,7 @@ POST {json file} <url>/insert/
   "timestamp": "2017-08-22 12:00:00.000-00:00", 
   "clinic_id": "EF",
   "location_id": "examp_loc",
-  "alliance_id": 9000, 
+  "patient_id": 9000, 
   "address1": "333 S State St", 
   "address2": "Ste 420", 
   "city": "Chicago", 

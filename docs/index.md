@@ -130,7 +130,7 @@ POST {json file} <url>/insert/
 
 #### Header
 
-| Field            | Format       | Constraints      |                                                                                             |
+| Field            | Format       | Constraints      | Notes                                                                                       |
 |------------------|--------------|------------------|---------------------------------------------------------------------------------------------|
 | Date             | Integer      | <N/A>            | ID of the record submitted.                                                                 |
 | Server           | Text         | "Apache"         | The type of the server providing the results                                                |

@@ -25,7 +25,7 @@ POST {json file} <url>/insert/
 | Field           | Format   | Constraints                        | Notes                                                                                                             |
 |-----------------|----------|------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | timestamp       | TimeDate | yyyy-mm-dd hh:mm:ss.sss-hh:mm      | Current timestamp (RFC 3339 complient date)                                                                       |
-| visit_date      | Date     | yyyy-mm-dd                         | [OPTIONAL] Effective date of score                                                                                |
+| visit_date      | Date     | yyyy-mm-dd                         | Effective date of score                                                                                |
 | network_id      | Text     | <N/A>                              | The parent entity of the submitting organization                                                                  |
 | clinic_id       | Text     | <N/A>                              | Organization ID                                                                                                   |
 | location_id     | Text     | <N/A>                              | Specific Location Abbreviation in Centricity                                                                      |
@@ -110,10 +110,10 @@ POST {json file} <url>/insert/
 
 | Field            | Format       | Constraints                       | Notes/Questions                                                                                  |
 |------------------|--------------|-----------------------------------|--------------------------------------------------------------------------------------------------|
-| version          | Text         | "0.2.1"                           | Follows Semantic Versioning 2.0.0 http://semver.org/spec/v2.0.0.html                             |
-| timestamp        | TimeDate     | yyyy-mm-dd hh:mm:ss.sss-hh:mm     | Current Timestamp. RFC 3339 (ISO 8601 derivative).                                               |
+| version          | Text         | "0.3.0"                           | Follows Semantic Versioning 2.0.0 http://semver.org/spec/v2.0.0.html                             |
+| timestamp        | TimeDate     | yyyy-mm-dd hh:mm:ss.sss-hh:mm     | Current Timestamp (RFC 3339 complient date).                                               |
 | visit_date       | Date         | yyyy-mm-dd                        | Effective date of score                                                                          |
-| patient_id       | Text         | AlphaNumeric                      | Return value provided by Feed                                                                    |
+| patient_id       | Text         | AlphaNumeric                      | Same `patient_id` that was submitted to the API.                        |
 | risk_score       | AlphaNumeric | 9.99                              | Currently expecting numeric, future may be phrased by stating an odds ratio with the risk score. |
 | risk_score_notes | Text         | <N/A>                             | Additional notes (referral, remediation funds, etc to be returned to provider )                  |                                                                                                 |
 

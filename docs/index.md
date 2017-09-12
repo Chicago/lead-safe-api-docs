@@ -175,7 +175,7 @@ GET <url>/get/
 
 ##### Response
 
-| Field       | Format       | Constraints    | 
+| Field       | Format       | Constraints    | Notes                                                                                            |
 |-------------|--------------|----------------|--------------------------------------------------------------------------------------------------|
 | id          | Integer      | <N/A>          | ID of the record submitted.                                                                      |
 | processed   | Text         | "Y" or "N"     | Whether the results are available. Results may be an error or blank if the record was incorrect. |

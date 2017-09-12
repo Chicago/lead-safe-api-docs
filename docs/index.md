@@ -22,38 +22,40 @@ Submit a patient record and retrieved the estimated probability of having elevat
 POST {json file} <url>/insert/
 ```
 
-| Field           | Format   | Constraints                                                | Notes/Questions                                                                                                   |
-|-----------------|----------|------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| timestamp       | TimeDate | yyyy-mm-dd hh:mm:ss.sss-hh:mm                              | Current Timestamp. RFC 3339 (ISO 8601 derivative).                                                                |
-| visit_date      | Date     | yyyy-mm-dd                                                 | Effective date of score                                                                                           |
-| network_id      | Text     |                                                            | The parent entity of the submitting organization                                                                  |
-| clinic_id       | Text     |                                                            | Two Characted Organization ID (NN- NearNorth  EF- ErieFamily)                                                     |
-| location_id     | Text     |                                                            | Specific Location Abbreviation in Centricity                                                                      |
-| patient_id      | Text     | AlphaNumeric                                               | A id to identify individual patients, should be unique with secondary key.                                        |
-| address1        | Text     | Address number, street direction, street name, street type | Patientprofile.address1                                                                                           |
-| address2        | Text     | Additional address information, e.g. apartment number      | patientprofile.address2                                                                                           |
-| city            | Text     |                                                            | patientprofile.city                                                                                               |
-| state           | Text     |                                                            | patientprofile.state                                                                                              |
-| zip             | Text     | 5 digit zip code                                           | patientprofile.Zip                                                                                                |
-| date_of_birth   | Date     | yyyy-mm-dd                                                 |                                                                                                                   |
-| gender          | Text     | M/F/U                                                      |                                                                                                                   |
-| race            | Text     | Code Values from Centricity                                | Standard ONC Race definitions <br> <br> **Code / description** <br> 1002-5 / American Indian or Alaska Native <br> 2028-9 / Asian <br> 2054-5 / Black or African American <br> 2076-8 / Native Hawaiian or Other Pacific Islander <br> 2106-3 / White <br> UNK / Unknown |
-| ethnicity       | Text     | Code Values from Centricity                                | Standard ONC Ethnicity definitions <br> <br> **Code / description** <br> 2135-2 / Hispanic or Latino <br> 2186-5 / Non Hispanic or Latino <br> UNK / Unknown |
-| Visit Array     |          |                                                            |                                                                                                                   |
-| visit.visit_id  | Numeric  | 16 Digit GE ID                                             | Unique GE ID for specific visit  (DocumentID)                                                                     |
-| visit.date      | Date     | yyyy-mm-dd hh:mm:ss.sss-hh:mm                              | RFC 3339 (ISO 8601 derivative).                                                                                   |
-| visit.location  | Text     |                                                            | Text Abbreviation for facility of visit location                                                                  |
-| visit.provider  | Text     |                                                            | Full provider name, last name, or just NPI                                                                        |
-| Lab Array       |          |                                                            |                                                                                                                   |
-| lab.lab_id      | Numeric  | 16 Digit GE ID                                             | Unique GE ID for specific lab result (ObsID)                                                                      |
-| lab.type        | Text     | BLL                                                        | Static BLL unless we identify additional labs to include                                                          |
-| lab.date        | Date     | yyyy-mm-dd                                                 |                                                                                                                   |
-| lab.sample_type | Text     | "V" or "C"                                                 | "V" Veinous or "C" for Capillary                                                                                  |
-| lab.result      | Text     |                                                            | Several values are possible; integer, non-integer numeric, ranges indicated by alphanumeric text.  We'll use previous examples to essentially construct a dictionary. |
+| Field           | Format   | Constraints                        | Notes                                                                                                             |
+|-----------------|----------|------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| timestamp       | TimeDate | yyyy-mm-dd hh:mm:ss.sss-hh:mm      | Current timestamp (RFC 3339 complient date)                                                                       |
+| visit_date      | Date     | yyyy-mm-dd                         | [OPTIONAL] Effective date of score                                                                                |
+| network_id      | Text     | <N/A>                              | The parent entity of the submitting organization                                                                  |
+| clinic_id       | Text     | <N/A>                              | Organization ID                                                                                                   |
+| location_id     | Text     | <N/A>                              | Specific Location Abbreviation in Centricity                                                                      |
+| patient_id      | Text     | <N/A>                              | AlphaNumeric patient identifier                                                                                                |
+| address1        | Text     | <N/A>                              | Patient home address (street number, street direction, street name, street type)                                  |
+| address2        | Text     | <N/A>                              | Patient home address (additional information, e.g. apartment number)                                              |
+| city            | Text     | <N/A>                              | Patient home address city                                                                                         |
+| state           | Text     | <N/A>                              | Patient home address state                                                                                        |
+| zip             | Text     | <N/A>                              | Patient home address zip code                                                                                     |
+| date_of_birth   | Date     | yyyy-mm-dd                         | Patient date of birth                                                                                             |
+| gender          | Text     | M/F/U                              | Patient gender                                                                                                    |
+| race            | Text     | Code Values from Centricity        | Standard ONC Race definitions <br> <br> **Code / description** <br> 1002-5 / American Indian or Alaska Native <br> 2028-9 / Asian <br> 2054-5 / Black or African American <br> 2076-8 / Native Hawaiian or Other Pacific Islander <br> 2106-3 / White <br> UNK / Unknown |
+| ethnicity       | Text     | Code Values from Centricity        | Standard ONC Ethnicity definitions <br> <br> **Code / description** <br> 2135-2 / Hispanic or Latino <br> 2186-5 / Non Hispanic or Latino <br> UNK / Unknown |
+| VISIT ARRAY     |          |                                    |                                                                                                                   |
+| visit.visit_id  | Numeric  | 16 Digit GE ID                     | Unique GE ID for specific visit (DocumentID)                                                                      |
+| visit.date      | Date     | yyyy-mm-dd hh:mm:ss.sss-hh:mm      | Date of visit (RFC 3339 complient date)                                                                           |
+| visit.location  | Text     | <N/A>                              | Text Abbreviation for facility of visit location                                                                  |
+| visit.provider  | Text     | <N/A>                              | Full provider name, last name, or just NPI                                                                        |
+| LAB ARRAY       |          |                                    |                                                                                                                   |
+| lab.lab_id      | Numeric  | 16 Digit GE ID                     | Unique GE ID for specific lab result (ObsID)                                                                      |
+| lab.type        | Text     | "BLL"                              | Static BLL unless we identify additional labs to include                                                          |
+| lab.date        | Date     | yyyy-mm-dd                         | Date of lab results                                                                                               |
+| lab.sample_type | Text     | V/C                                | "V" Venous or "C" for Capillary                                                                                   |
+| lab.result      | Text     | <N/A>                              | Several values are possible; integer, non-integer numeric, ranges indicated by alphanumeric text.                 |
 
 ```json
 {
   "timestamp": "2017-08-22 12:00:00.000-00:00", 
+  "visit_date": "2017-08-22",
+  "network_id": "Alliance Health",
   "clinic_id": "EF",
   "location_id": "examp_loc",
   "patient_id": 9000, 
@@ -67,38 +69,38 @@ POST {json file} <url>/insert/
   "race": "2054-5", 
   "ethnicity": "2186-5",
   "visit": [
-    {"date": "2017-07-25 15:02:54.171-0:00", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"},
-    {"date": "2017-07-25 15:02:54.171-0:00", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171-0:00", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171-0:00", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171-0:00", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171-0:00", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171-0:00", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171-0:00", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171-0:00", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171-0:00", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171-0:00", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171-0:00", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171-0:00", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}, 
-    {"date": "2017-07-25 15:02:54.171-0:00", "visit_id": 1234567891011121, "location": "333 S State St", "provider": "John Doe"}
+    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"},
+    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
+    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
+    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
+    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
+    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
+    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
+    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
+    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
+    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
+    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
+    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
+    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
+    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}
   ],
   "lab": [
-    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 5.0, "result": "None Detected ug/dL", "date": "2016-07-29", "type": "BLL"}, 
-    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 5.0, "result": "1", "date": "2015-08-21", "type": "BLL"}, 
-    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 5.0, "result": "1", "date": "2015-02-27", "type": "BLL"}, 
-    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 5.0, "result": "1", "date": "2014-06-06", "type": "BLL"}, 
-    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "3", "date": "2014-09-29", "type": "BLL"}, 
-    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "4.1", "date": "2014-01-09", "type": "BLL"}, 
-    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "4.1", "date": "2013-06-28", "type": "BLL"}, 
-    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "6.3", "date": "2013-03-13", "type": "BLL"}, 
-    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "9.7", "date": "2012-10-02", "type": "BLL"}, 
-    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "16.3", "date": "2012-06-19", "type": "BLL"}, 
-    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "3", "date": "2016-09-16", "type": "BLL"}, 
-    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "3", "date": "2015-12-15", "type": "BLL"}, 
-    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "3", "date": "2015-06-09", "type": "BLL"}, 
-    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "13.6", "date": "2012-03-20", "type": "BLL"}, 
-    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "15", "date": "2012-02-21", "type": "BLL"}, 
-    {"lab_id": 1234567891011121, "route": "V", "healthcenterid": 1.0, "result": "5", "date": "2011-08-19", "type": "BLL"}] 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2016-07-29", "sample_type": "V", "result": "None Detected ug/dL"}, 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2015-08-21", "sample_type": "V", "result": "1"}, 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2015-02-27", "sample_type": "V", "result": "1"}, 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2014-06-06", "sample_type": "V", "result": "1"}, 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2014-09-29", "sample_type": "V", "result": "3"}, 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2014-01-09", "sample_type": "V", "result": "4.1"}, 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2013-06-28", "sample_type": "V", "result": "4.1"}, 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2013-03-13", "sample_type": "V", "result": "6.3"}, 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2012-10-02", "sample_type": "V", "result": "9.7"}, 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2012-06-19", "sample_type": "V", "result": "16.3"}, 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2016-09-16", "sample_type": "V", "result": "3"}, 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2015-12-15", "sample_type": "V", "result": "3"}, 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2015-06-09", "sample_type": "V", "result": "3"}, 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2012-03-20", "sample_type": "V", "result": "13.6"}, 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2012-02-21", "sample_type": "V", "result": "15"}, 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2011-08-19", "sample_type": "V", "result": "5"}] 
 }
 ```
 
@@ -106,14 +108,14 @@ POST {json file} <url>/insert/
 
 #### Body
 
-| Field            | Format       | Constraints                                                                     | Notes/Questions                                                                                  |
-|------------------|--------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| version          | Text         | "0.2.1"                                                                         | Follows Semantic Versioning 2.0.0 http://semver.org/spec/v2.0.0.html                             |
-| timestamp        | TimeDate     | yyyy-mm-ddThh:mm:ss.sss-hh:mm                                                   | Current Timestamp. RFC 3339 (ISO 8601 derivative).                                               |
-| visit_date       | Date         | yyyy-mm-dd                                                                      | Effective date of score                                                                          |
-| patient_id       | Text         | AlphaNumeric                                                                    | Return value provided by Feed                                                                    |
-| risk_score       | AlphaNumeric | 9.99                                                                            | Currently expecting numeric, future may be phrased by stating an odds ratio with the risk score. |
-| risk_score_notes | Text         | Additional notes (referral, remediation funds, etc to be returned to provider ) |                                                                                                  |
+| Field            | Format       | Constraints                       | Notes/Questions                                                                                  |
+|------------------|--------------|-----------------------------------|--------------------------------------------------------------------------------------------------|
+| version          | Text         | "0.2.1"                           | Follows Semantic Versioning 2.0.0 http://semver.org/spec/v2.0.0.html                             |
+| timestamp        | TimeDate     | yyyy-mm-dd hh:mm:ss.sss-hh:mm     | Current Timestamp. RFC 3339 (ISO 8601 derivative).                                               |
+| visit_date       | Date         | yyyy-mm-dd                        | Effective date of score                                                                          |
+| patient_id       | Text         | AlphaNumeric                      | Return value provided by Feed                                                                    |
+| risk_score       | AlphaNumeric | 9.99                              | Currently expecting numeric, future may be phrased by stating an odds ratio with the risk score. |
+| risk_score_notes | Text         | <N/A>                             | Additional notes (referral, remediation funds, etc to be returned to provider )                  |                                                                                                 |
 
 ```json
 {
@@ -130,13 +132,13 @@ POST {json file} <url>/insert/
 
 | Field            | Format       | Constraints      |                                                                                             |
 |------------------|--------------|------------------|---------------------------------------------------------------------------------------------|
-| Date             | Integer      | N/A              | ID of the record submitted.                                                                 |
+| Date             | Integer      | <N/A>            | ID of the record submitted.                                                                 |
 | Server           | Text         | "Apache"         | The type of the server providing the results                                                |
-| Content-Location | URL          |                  | Pernament location to retrieve the results                                                  |
-| ETag             |              |                  |                                                                                             |
+| Content-Location | URL          | <N/A>            | Pernament location to retrieve the results                                                  |
+| ETag             |              | <N/A>            |                                                                                             |
 | Content-Length   | Integer      | 225              |                                                                                             |
 | Content-Type     | Text         | application/json | Informs user that the content will be a JSON file                                           |
-| Set-Cookie       | Text         |                  |                                                                                             |
+| Set-Cookie       | Text         | <N/A>            |                                                                                             |
 
 ```
 HTTP/1.1 200 OK
@@ -176,7 +178,7 @@ GET <url>/get/
 
 | Field       | Format       | Constraints    | 
 |-------------|--------------|----------------|--------------------------------------------------------------------------------------------------|
-| id          | Integer      | N/A            | ID of the record submitted.                                                                      |
+| id          | Integer      | <N/A>          | ID of the record submitted.                                                                      |
 | processed   | Text         | "Y" or "N"     | Whether the results are available. Results may be an error or blank if the record was incorrect. |
 
 ```json

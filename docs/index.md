@@ -25,15 +25,15 @@ POST {json file} <url>/insert/
 | Field           | Format   | Constraints                        | Notes                                                                                                             |
 |-----------------|----------|------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | timestamp       | TimeDate | yyyy-mm-dd hh:mm:ss.sss-hh:mm      | Current timestamp (RFC 3339 complient date)                                                                       |
-| network_id      | Text     | <N/A>                              | The parent entity of the submitting organization                                                                  |
-| clinic_id       | Text     | <N/A>                              | Organization ID                                                                                                   |
-| location_id     | Text     | <N/A>                              | Specific Location Abbreviation in Centricity                                                                      |
-| patient_id      | Text     | <N/A>                              | AlphaNumeric patient identifier                                                                                   |
-| address1        | Text     | <N/A>                              | Patient home address (street number, street direction, street name, street type)                                  |
-| address2        | Text     | <N/A>                              | Patient home address (additional information, e.g. apartment number)                                              |
-| city            | Text     | <N/A>                              | Patient home address city                                                                                         |
-| state           | Text     | <N/A>                              | Patient home address state                                                                                        |
-| zip             | Text     | <N/A>                              | Patient home address zip code                                                                                     |
+| network_id      | Text     | <N/A\>                             | The parent entity of the submitting organization                                                                  |
+| clinic_id       | Text     | <N/A\>                             | Organization ID                                                                                                   |
+| location_id     | Text     | <N/A\>                             | Specific Location Abbreviation in Centricity                                                                      |
+| patient_id      | Text     | <N/A\>                             | AlphaNumeric patient identifier                                                                                   |
+| address1        | Text     | <N/A\>                             | Patient home address (street number, street direction, street name, street type)                                  |
+| address2        | Text     | <N/A\>                             | Patient home address (additional information, e.g. apartment number)                                              |
+| city            | Text     | <N/A\>                             | Patient home address city                                                                                         |
+| state           | Text     | <N/A\>                             | Patient home address state                                                                                        |
+| zip             | Text     | <N/A\>                             | Patient home address zip code                                                                                     |
 | date_of_birth   | Date     | yyyy-mm-dd                         | Patient date of birth                                                                                             |
 | gender          | Text     | M/F/U                              | Patient gender                                                                                                    |
 | race            | Text     | Code Values from Centricity        | Standard ONC Race definitions <br> <br> **Code / description** <br> 1002-5 / American Indian or Alaska Native <br> 2028-9 / Asian <br> 2054-5 / Black or African American <br> 2076-8 / Native Hawaiian or Other Pacific Islander <br> 2106-3 / White <br> UNK / Unknown |
@@ -41,14 +41,14 @@ POST {json file} <url>/insert/
 | VISIT ARRAY     |          |                                    |                                                                                                                   |
 | visit.visit_id  | Numeric  | 16 Digit GE ID                     | Unique GE ID for specific visit (DocumentID)                                                                      |
 | visit.date      | Date     | yyyy-mm-dd hh:mm:ss.sss-hh:mm      | Date of visit (RFC 3339 complient date)                                                                           |
-| visit.location  | Text     | <N/A>                              | Text Abbreviation for facility of visit location                                                                  |
-| visit.provider  | Text     | <N/A>                              | Full provider name, last name, or just NPI                                                                        |
+| visit.location  | Text     | <N/A\>                             | Text Abbreviation for facility of visit location                                                                  |
+| visit.provider  | Text     | <N/A\>                             | Full provider name, last name, or just NPI                                                                        |
 | LAB ARRAY       |          |                                    |                                                                                                                   |
 | lab.lab_id      | Numeric  | 16 Digit GE ID                     | Unique GE ID for specific lab result (ObsID)                                                                      |
 | lab.type        | Text     | "BLL"                              | Static BLL unless we identify additional labs to include                                                          |
 | lab.date        | Date     | yyyy-mm-dd                         | Date of lab results                                                                                               |
 | lab.sample_type | Text     | V/C                                | "V" Venous or "C" for Capillary                                                                                   |
-| lab.result      | Text     | <N/A>                              | Several values are possible; integer, non-integer numeric, ranges indicated by alphanumeric text.                 |
+| lab.result      | Text     | <N/A\>                             | Several values are possible; integer, non-integer numeric, ranges indicated by alphanumeric text.                 |
 
 ```json
 {
@@ -88,7 +88,7 @@ POST {json file} <url>/insert/
 | timestamp        | TimeDate     | yyyy-mm-dd hh:mm:ss.sss-hh:mm     | Current Timestamp (RFC 3339 complient date).                                                     |
 | patient_id       | Text         | AlphaNumeric                      | Same `patient_id` that was submitted to the API.                                                 |
 | risk_score       | Text         | 9.99                              | Currently expecting numeric, future may be phrased by stating an odds ratio with the risk score. |
-| risk_score_notes | Text         | <N/A>                             | Additional notes (referral, remediation funds, etc to be returned to provider )                  |                                                                                                 |
+| risk_score_notes | Text         | <N/A\>                            | Additional notes (referral, remediation funds, etc to be returned to provider )                  |                                                                                                 |
 
 ```json
 {
@@ -104,13 +104,13 @@ POST {json file} <url>/insert/
 
 | Field            | Format       | Constraints      | Notes                                                                                       |
 |------------------|--------------|------------------|---------------------------------------------------------------------------------------------|
-| Date             | Integer      | <N/A>            | ID of the record submitted.                                                                 |
+| Date             | Integer      | <N/A\>           | ID of the record submitted.                                                                 |
 | Server           | Text         | "Apache"         | The type of the server providing the results                                                |
-| Content-Location | URL          | <N/A>            | Pernament location to retrieve the results                                                  |
-| ETag             |              | <N/A>            |                                                                                             |
+| Content-Location | URL          | <N/A\>           | Pernament location to retrieve the results                                                  |
+| ETag             |              | <N/A\>           |                                                                                             |
 | Content-Length   | Integer      | 225              |                                                                                             |
 | Content-Type     | Text         | application/json | Informs user that the content will be a JSON file                                           |
-| Set-Cookie       | Text         | <N/A>            |                                                                                             |
+| Set-Cookie       | Text         | <N/A\>           |                                                                                             |
 
 ```
 HTTP/1.1 200 OK
@@ -149,7 +149,7 @@ GET <url>/get/
 
 | Field       | Format       | Constraints    | Notes                                                                                            |
 |-------------|--------------|----------------|--------------------------------------------------------------------------------------------------|
-| id          | Integer      | <N/A>          | ID of the record submitted.                                                                      |
+| id          | Integer      | <N/A\>         | ID of the record submitted.                                                                      |
 | processed   | Text         | "Y" or "N"     | Whether the results are available. Results may be an error or blank if the record was incorrect. |
 
 ```json

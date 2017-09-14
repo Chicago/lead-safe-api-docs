@@ -1,4 +1,4 @@
-"Lead Safe" is an API available to Chicago-area hospital and health networks to provide estimates on a child's potential exposure to elevated lead levels from household paint. Health network providers can provide information on the patient's demographics, address, and history on their past visits and blood-lead levels, the Lead Safe API will provide an estimate on the chance of elevated, unsafe blood-lead levels for children under 4 years-old.
+"Lead Safe" is an API available to Chicago-area hospital and health networks to estimate  the likelihood that a child will be exposed to lead-based paint hazards. Health network providers can provide information on the patient's demographics, address, and history on their past visits and blood-lead levels, the Lead Safe API will provide an estimate on the chance of elevated, unsafe blood-lead levels for children under 4 years-old.
 
 The API uses a predictive model developed by the University of Chicago[^1] that uses historical blood-lead level testing conducted by the State of Illinois. Data submitted through this API and subsequent testing conducted will improve the accuracy of the model, allowing for a more effective use of blood tests to prevent elevated lead levels.
 
@@ -14,9 +14,9 @@ In order to integrate with Lead Safe, the health provider will need to make a RE
 
 ## API
 
-### Submitting Prediction
+### Submitting Patient Record
  
-Submit a patient record and retrieved the estimated probability of having elevated blood-lead levels.
+Submit a patient record and retrieve the estimated risk of having elevated blood-lead levels.
 
 ```bash
 POST {json file} <url>/insert/
@@ -56,7 +56,7 @@ POST {json file} <url>/insert/
   "network_id": "Alliance Health",
   "clinic_id": "EF",
   "location_id": "examp_loc",
-  "patient_id": 9000, 
+  "patient_id": "9000", 
   "address1": "333 S State St", 
   "address2": "Ste 420", 
   "city": "Chicago", 
@@ -87,14 +87,14 @@ POST {json file} <url>/insert/
 | version          | Text         | "0.3.0"                           | Follows Semantic Versioning 2.0.0 http://semver.org/spec/v2.0.0.html                             |
 | timestamp        | TimeDate     | yyyy-mm-dd hh:mm:ss.sss-hh:mm     | Current Timestamp (RFC 3339 complient date).                                                     |
 | patient_id       | Text         | AlphaNumeric                      | Same `patient_id` that was submitted to the API.                                                 |
-| risk_score       | AlphaNumeric | 9.99                              | Currently expecting numeric, future may be phrased by stating an odds ratio with the risk score. |
+| risk_score       | Test | 9.99                              | Currently expecting numeric, future may be phrased by stating an odds ratio with the risk score. |
 | risk_score_notes | Text         | <N/A>                             | Additional notes (referral, remediation funds, etc to be returned to provider )                  |                                                                                                 |
 
 ```json
 {
     "version": "0.3.0", 
     "timestamp": "2017-08-11 19:20:29.000-00:00", 
-    "patient_id": 6425, 
+    "patient_id": "9000", 
     "risk_score": "0.309", 
     "risk_score_notes": "Risk Score Notes"
 }

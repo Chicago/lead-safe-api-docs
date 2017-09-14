@@ -25,7 +25,6 @@ POST {json file} <url>/insert/
 | Field           | Format   | Constraints                        | Notes                                                                                                             |
 |-----------------|----------|------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | timestamp       | TimeDate | yyyy-mm-dd hh:mm:ss.sss-hh:mm      | Current timestamp (RFC 3339 complient date)                                                                       |
-| visit_date      | Date     | yyyy-mm-dd                         | Effective date of score                                                                                |
 | network_id      | Text     | <N/A>                              | The parent entity of the submitting organization                                                                  |
 | clinic_id       | Text     | <N/A>                              | Organization ID                                                                                                   |
 | location_id     | Text     | <N/A>                              | Specific Location Abbreviation in Centricity                                                                      |
@@ -54,7 +53,6 @@ POST {json file} <url>/insert/
 ```json
 {
   "timestamp": "2017-08-22 12:00:00.000-00:00", 
-  "visit_date": "2017-08-22",
   "network_id": "Alliance Health",
   "clinic_id": "EF",
   "location_id": "examp_loc",
@@ -112,7 +110,6 @@ POST {json file} <url>/insert/
 |------------------|--------------|-----------------------------------|--------------------------------------------------------------------------------------------------|
 | version          | Text         | "0.3.0"                           | Follows Semantic Versioning 2.0.0 http://semver.org/spec/v2.0.0.html                             |
 | timestamp        | TimeDate     | yyyy-mm-dd hh:mm:ss.sss-hh:mm     | Current Timestamp (RFC 3339 complient date).                                                     |
-| visit_date       | Date         | yyyy-mm-dd                        | Effective date of score                                                                          |
 | patient_id       | Text         | AlphaNumeric                      | Same `patient_id` that was submitted to the API.                                                 |
 | risk_score       | AlphaNumeric | 9.99                              | Currently expecting numeric, future may be phrased by stating an odds ratio with the risk score. |
 | risk_score_notes | Text         | <N/A>                             | Additional notes (referral, remediation funds, etc to be returned to provider )                  |                                                                                                 |
@@ -121,7 +118,6 @@ POST {json file} <url>/insert/
 {
     "version": "0.3.0", 
     "timestamp": "2017-08-11 19:20:29.000-00:00", 
-    "visit_date": "2017-07-25", 
     "patient_id": 6425, 
     "risk_score": "0.309", 
     "risk_score_notes": "Risk Score Notes"

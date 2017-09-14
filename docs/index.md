@@ -181,6 +181,6 @@ Thou shalt not...
 
 ## Acknowledgements
 
-The "Lead Safe" API was developed by the [Chicago Department of Public Health](https://www.cityofchicago.org/city/en/depts/cdph.html), [University of Chicago's Center for Data Science and Public Policy](http://dsapp.uchicago.edu/), and the [Chicago Department of Innovation and Technology](https://www.cityofchicago.org/city/en/depts/doit.html). This project was made possible by a grant from the [Robert Wood Johnson Foundation](http://www.rwjf.org/). 
+The "Lead Safe" API was developed by the [Chicago Department of Public Health](https://www.cityofchicago.org/city/en/depts/cdph.html), University of Chicago's [Center for Data Science and Public Policy](http://dsapp.uchicago.edu/) and [Harris School of Public Policy](http://harris.uchicago.edu), and the [Chicago Department of Innovation and Technology](https://www.cityofchicago.org/city/en/depts/doit.html). This project was made possible by a grant from the [Robert Wood Johnson Foundation](http://www.rwjf.org/). 
 
 [^1]: Potash _et al._ (2015) [Predictive Modeling for Public Health](ttps://dssg.uchicago.edu/wp-content/uploads/2016/01/p2039-potash.pdf). _Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining_ pp. 2039-2047.

@@ -69,36 +69,12 @@ POST {json file} <url>/insert/
   "visit": [
     {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"},
     {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
-    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
-    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
-    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
-    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
-    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
-    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
-    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
-    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
-    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
-    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
-    {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}, 
     {"visit_id": 1234567891011121, "date": "2017-07-25 15:02:54.171-00:00", "location": "333 S State St", "provider": "John Doe"}
   ],
   "lab": [
     {"lab_id": 1234567891011121, "type": "BLL", "date": "2016-07-29", "sample_type": "V", "result": "None Detected ug/dL"}, 
-    {"lab_id": 1234567891011121, "type": "BLL", "date": "2015-08-21", "sample_type": "V", "result": "1"}, 
-    {"lab_id": 1234567891011121, "type": "BLL", "date": "2015-02-27", "sample_type": "V", "result": "1"}, 
-    {"lab_id": 1234567891011121, "type": "BLL", "date": "2014-06-06", "sample_type": "V", "result": "1"}, 
-    {"lab_id": 1234567891011121, "type": "BLL", "date": "2014-09-29", "sample_type": "V", "result": "3"}, 
-    {"lab_id": 1234567891011121, "type": "BLL", "date": "2014-01-09", "sample_type": "V", "result": "4.1"}, 
-    {"lab_id": 1234567891011121, "type": "BLL", "date": "2013-06-28", "sample_type": "V", "result": "4.1"}, 
-    {"lab_id": 1234567891011121, "type": "BLL", "date": "2013-03-13", "sample_type": "V", "result": "6.3"}, 
-    {"lab_id": 1234567891011121, "type": "BLL", "date": "2012-10-02", "sample_type": "V", "result": "9.7"}, 
-    {"lab_id": 1234567891011121, "type": "BLL", "date": "2012-06-19", "sample_type": "V", "result": "16.3"}, 
-    {"lab_id": 1234567891011121, "type": "BLL", "date": "2016-09-16", "sample_type": "V", "result": "3"}, 
-    {"lab_id": 1234567891011121, "type": "BLL", "date": "2015-12-15", "sample_type": "V", "result": "3"}, 
-    {"lab_id": 1234567891011121, "type": "BLL", "date": "2015-06-09", "sample_type": "V", "result": "3"}, 
-    {"lab_id": 1234567891011121, "type": "BLL", "date": "2012-03-20", "sample_type": "V", "result": "13.6"}, 
-    {"lab_id": 1234567891011121, "type": "BLL", "date": "2012-02-21", "sample_type": "V", "result": "15"}, 
-    {"lab_id": 1234567891011121, "type": "BLL", "date": "2011-08-19", "sample_type": "V", "result": "5"}] 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2015-08-21", "sample_type": "V", "result": "16.3"}, 
+    {"lab_id": 1234567891011121, "type": "BLL", "date": "2015-02-27", "sample_type": "V", "result": "1"}] 
 }
 ```
 

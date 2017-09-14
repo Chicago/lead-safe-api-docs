@@ -28,7 +28,7 @@ POST {json file} <url>/insert/
 | network_id      | Text     | <N/A>                              | The parent entity of the submitting organization                                                                  |
 | clinic_id       | Text     | <N/A>                              | Organization ID                                                                                                   |
 | location_id     | Text     | <N/A>                              | Specific Location Abbreviation in Centricity                                                                      |
-| patient_id      | Text     | <N/A>                              | AlphaNumeric patient identifier                                                                                                |
+| patient_id      | Text     | <N/A>                              | AlphaNumeric patient identifier                                                                                   |
 | address1        | Text     | <N/A>                              | Patient home address (street number, street direction, street name, street type)                                  |
 | address2        | Text     | <N/A>                              | Patient home address (additional information, e.g. apartment number)                                              |
 | city            | Text     | <N/A>                              | Patient home address city                                                                                         |
@@ -87,7 +87,7 @@ POST {json file} <url>/insert/
 | version          | Text         | "0.3.0"                           | Follows Semantic Versioning 2.0.0 http://semver.org/spec/v2.0.0.html                             |
 | timestamp        | TimeDate     | yyyy-mm-dd hh:mm:ss.sss-hh:mm     | Current Timestamp (RFC 3339 complient date).                                                     |
 | patient_id       | Text         | AlphaNumeric                      | Same `patient_id` that was submitted to the API.                                                 |
-| risk_score       | Text | 9.99                              | Currently expecting numeric, future may be phrased by stating an odds ratio with the risk score. |
+| risk_score       | Text         | 9.99                              | Currently expecting numeric, future may be phrased by stating an odds ratio with the risk score. |
 | risk_score_notes | Text         | <N/A>                             | Additional notes (referral, remediation funds, etc to be returned to provider )                  |                                                                                                 |
 
 ```json

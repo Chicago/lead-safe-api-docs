@@ -36,8 +36,8 @@ POST {json file} <url>/insert/
 | zip             | Text     | <N/A\>                             | Patient home address zip code                                                                                     |
 | date_of_birth   | Date     | yyyy-mm-dd                         | Patient date of birth                                                                                             |
 | gender          | Text     | M/F/U                              | Patient gender                                                                                                    |
-| race            | Text     | Code Values from Centricity        | Standard ONC Race definitions <br> <br> **Code / description** <br> 1002-5 / American Indian or Alaska Native <br> 2028-9 / Asian <br> 2054-5 / Black or African American <br> 2076-8 / Native Hawaiian or Other Pacific Islander <br> 2106-3 / White <br> UNK / Unknown |
-| ethnicity       | Text     | Code Values from Centricity        | Standard ONC Ethnicity definitions <br> <br> **Code / description** <br> 2135-2 / Hispanic or Latino <br> 2186-5 / Non Hispanic or Latino <br> UNK / Unknown |
+| race            | Text     | Code Values from Centricity        | Standard ONC Race definitions <br /> <br /> **Code / description** <br /> 1002-5 / American Indian or Alaska Native <br /> 2028-9 / Asian <br /> 2054-5 / Black or African American <br /> 2076-8 / Native Hawaiian or Other Pacific Islander <br /> 2106-3 / White <br /> UNK / Unknown |
+| ethnicity       | Text     | Code Values from Centricity        | Standard ONC Ethnicity definitions <br/> <br/> **Code / description** <br /> 2135-2 / Hispanic or Latino <br /> 2186-5 / Non Hispanic or Latino <br /> UNK / Unknown |
 | VISIT ARRAY     |          |                                    | _Optional_ May entirely omit the array if visit history does not exist or is unavailable.  |
 | visit.visit_id  | Numeric  | 16 Digit GE ID                     | Unique GE ID for specific visit (DocumentID)                                                                      |
 | visit.date      | Date     | yyyy-mm-dd hh:mm:ss.sss-hh:mm      | Date of visit (RFC 3339 complient date)                                                                           |
@@ -47,7 +47,7 @@ POST {json file} <url>/insert/
 | lab.lab_id      | Numeric  | 16 Digit GE ID                     | Unique GE ID for specific lab result (ObsID)                                                                      |
 | lab.type        | Text     | "BLL"                              | Static BLL unless we identify additional labs to include                                                          |
 | lab.date        | Date     | yyyy-mm-dd                         | Date of lab results                                                                                               |
-| lab.sample_type | Text     | V/C                                | "V" Venous or "C" for Capillary                                                                                   |
+| lab.sample_type | Text     | V/C                                | "V" Venous <br /> "C" for Capillary                                        |
 | lab.result      | Text     | <N/A\>                             | Several values are possible; integer, non-integer numeric, ranges indicated by alphanumeric text.                 |
 
 ```json

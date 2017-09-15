@@ -38,12 +38,12 @@ POST {json file} <url>/insert/
 | gender          | Text     | M/F/U                              | Patient gender                                                                                                    |
 | race            | Text     | Code Values from Centricity        | Standard ONC Race definitions <br> <br> **Code / description** <br> 1002-5 / American Indian or Alaska Native <br> 2028-9 / Asian <br> 2054-5 / Black or African American <br> 2076-8 / Native Hawaiian or Other Pacific Islander <br> 2106-3 / White <br> UNK / Unknown |
 | ethnicity       | Text     | Code Values from Centricity        | Standard ONC Ethnicity definitions <br> <br> **Code / description** <br> 2135-2 / Hispanic or Latino <br> 2186-5 / Non Hispanic or Latino <br> UNK / Unknown |
-| VISIT ARRAY     |          |                                    |                                                                                                                   |
+| VISIT ARRAY     |          |                                    | _Optional_ May entirely omit the array if visit history does not exist or is unavailable.  |
 | visit.visit_id  | Numeric  | 16 Digit GE ID                     | Unique GE ID for specific visit (DocumentID)                                                                      |
 | visit.date      | Date     | yyyy-mm-dd hh:mm:ss.sss-hh:mm      | Date of visit (RFC 3339 complient date)                                                                           |
 | visit.location  | Text     | <N/A\>                             | Text Abbreviation for facility of visit location                                                                  |
 | visit.provider  | Text     | <N/A\>                             | Full provider name, last name, or just NPI                                                                        |
-| LAB ARRAY       |          |                                    |                                                                                                                   |
+| LAB ARRAY       |          |                                    | _Optional_ May entirely omit the array if visit history does not exist or is unavailable.  |
 | lab.lab_id      | Numeric  | 16 Digit GE ID                     | Unique GE ID for specific lab result (ObsID)                                                                      |
 | lab.type        | Text     | "BLL"                              | Static BLL unless we identify additional labs to include                                                          |
 | lab.date        | Date     | yyyy-mm-dd                         | Date of lab results                                                                                               |

@@ -1,0 +1,932 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Lead Free API Documentation">
+      
+      
+        <link rel="canonical" href="http://dev.cityofchicago.org/docs/lead-free/">
+      
+      
+        <meta name="author" content="City of Chicago">
+      
+      
+        <link rel="shortcut icon" href="./assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
+    
+    
+      
+        <title>Lead Safe API v0.4.0</title>
+      
+    
+    
+      <script src="./assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="./assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="./assets/stylesheets/application-02c2a4388f.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="http://dev.cityofchicago.org/docs/lead-free" title="Lead Safe API v0.4.0" class="md-logo md-header-nav__button">
+            <img src="./assets/images/city-seal-inverse-small.png" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Home
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="./assets/images/city-seal-inverse-small.png">
+      </i>
+    
+    Lead Safe API v0.4.0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Home
+      </label>
+    
+    <a href="." title="Home" class="md-nav__link md-nav__link--active">
+      Home
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obtaining-access" title="Obtaining Access" class="md-nav__link">
+    Obtaining Access
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eligibility" title="Eligibility" class="md-nav__link">
+    Eligibility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-api" title="Accessing API" class="md-nav__link">
+    Accessing API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" title="API" class="md-nav__link">
+    API
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submitting-patient-record" title="Submitting Patient Record" class="md-nav__link">
+    Submitting Patient Record
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" title="Response" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#body" title="Body" class="md-nav__link">
+    Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" title="Header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-previous-predictions" title="Retrieving Previous Predictions" class="md-nav__link">
+    Retrieving Previous Predictions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-status-on-all-submissions" title="Checking Status on All Submissions" class="md-nav__link">
+    Checking Status on All Submissions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response_1" title="Response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-risk-levels" title="Interpreting Risk Levels" class="md-nav__link">
+    Interpreting Risk Levels
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terms-and-conditions" title="Terms and Conditions" class="md-nav__link">
+    Terms and Conditions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgements" title="Acknowledgements" class="md-nav__link">
+    Acknowledgements
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obtaining-access" title="Obtaining Access" class="md-nav__link">
+    Obtaining Access
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eligibility" title="Eligibility" class="md-nav__link">
+    Eligibility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-api" title="Accessing API" class="md-nav__link">
+    Accessing API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" title="API" class="md-nav__link">
+    API
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submitting-patient-record" title="Submitting Patient Record" class="md-nav__link">
+    Submitting Patient Record
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" title="Response" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#body" title="Body" class="md-nav__link">
+    Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" title="Header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-previous-predictions" title="Retrieving Previous Predictions" class="md-nav__link">
+    Retrieving Previous Predictions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-status-on-all-submissions" title="Checking Status on All Submissions" class="md-nav__link">
+    Checking Status on All Submissions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response_1" title="Response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-risk-levels" title="Interpreting Risk Levels" class="md-nav__link">
+    Interpreting Risk Levels
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terms-and-conditions" title="Terms and Conditions" class="md-nav__link">
+    Terms and Conditions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgements" title="Acknowledgements" class="md-nav__link">
+    Acknowledgements
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Home</h1>
+                
+                <p>"Lead Safe" is an API available to Chicago-area hospital and health networks to estimate  the likelihood that a child will be exposed to lead-based paint hazards. Health network providers can provide information on the patient's demographics, address, and history on their past visits and blood-lead levels, the Lead Safe API will provide an estimate of the risk of elevated, unsafe blood-lead levels for children under 4 years-old.</p>
+<p>The API uses a predictive model developed by the University of Chicago<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> that uses historical blood-lead level testing conducted by the State of Illinois. Data submitted through this API and subsequent testing conducted will improve the accuracy of the model, allowing for a more effective use of blood tests to prevent elevated lead levels.</p>
+<h2 id="obtaining-access">Obtaining Access<a class="headerlink" href="#obtaining-access" title="Permanent link">&para;</a></h2>
+<h3 id="eligibility">Eligibility<a class="headerlink" href="#eligibility" title="Permanent link">&para;</a></h3>
+<p>To access the API, fill out <a href="#">this form</a> to be contacted by the Chicago Department of Public Health. The city will need to verify your eligiblity as an area health provider.</p>
+<h3 id="accessing-api">Accessing API<a class="headerlink" href="#accessing-api" title="Permanent link">&para;</a></h3>
+<p>In order to integrate with Lead Safe, the health provider will need to make a REST call against the API. To do so, they will be provided an API token which will provide some authentication. The city will also need to "whitelist" the IP address(es) of the health providers servers.</p>
+<h2 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h2>
+<h3 id="submitting-patient-record">Submitting Patient Record<a class="headerlink" href="#submitting-patient-record" title="Permanent link">&para;</a></h3>
+<p>Submit a patient record and retrieve the estimated risk of having elevated blood-lead levels.</p>
+<pre><code class="bash">POST {json file} &lt;url&gt;/insert/
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Format</th>
+<th>Constraints</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>timestamp</td>
+<td>TimeDate</td>
+<td>yyyy-mm-dd hh:mm:ss.sss-hh:mm</td>
+<td>Current timestamp (RFC 3339 complient date)</td>
+</tr>
+<tr>
+<td>network_id</td>
+<td>Text</td>
+<td>&lt;N/A></td>
+<td>The parent entity of the submitting organization</td>
+</tr>
+<tr>
+<td>clinic_id</td>
+<td>Text</td>
+<td>&lt;N/A></td>
+<td>Organization ID</td>
+</tr>
+<tr>
+<td>location_id</td>
+<td>Text</td>
+<td>&lt;N/A></td>
+<td>Specific Location Abbreviation in Centricity</td>
+</tr>
+<tr>
+<td>patient_id</td>
+<td>Text</td>
+<td>&lt;N/A></td>
+<td>AlphaNumeric patient identifier</td>
+</tr>
+<tr>
+<td>address1</td>
+<td>Text</td>
+<td>&lt;N/A></td>
+<td>Patient home address (street number, street direction, street name, street type)</td>
+</tr>
+<tr>
+<td>address2</td>
+<td>Text</td>
+<td>&lt;N/A></td>
+<td>Patient home address (additional information, e.g. apartment number)</td>
+</tr>
+<tr>
+<td>city</td>
+<td>Text</td>
+<td>&lt;N/A></td>
+<td>Patient home address city</td>
+</tr>
+<tr>
+<td>state</td>
+<td>Text</td>
+<td>&lt;N/A></td>
+<td>Patient home address state</td>
+</tr>
+<tr>
+<td>zip</td>
+<td>Text</td>
+<td>&lt;N/A></td>
+<td>Patient home address zip code</td>
+</tr>
+<tr>
+<td>date_of_birth</td>
+<td>Date</td>
+<td>yyyy-mm-dd</td>
+<td>Patient date of birth</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>Text</td>
+<td>M/F/U</td>
+<td>Patient gender</td>
+</tr>
+<tr>
+<td>race</td>
+<td>Text</td>
+<td>Code Values from Centricity</td>
+<td>Standard ONC Race definitions <br /> <br /> <strong>Code / description</strong> <br /> 1002-5 / American Indian or Alaska Native <br /> 2028-9 / Asian <br /> 2054-5 / Black or African American <br /> 2076-8 / Native Hawaiian or Other Pacific Islander <br /> 2106-3 / White <br /> UNK / Unknown</td>
+</tr>
+<tr>
+<td>ethnicity</td>
+<td>Text</td>
+<td>Code Values from Centricity</td>
+<td>Standard ONC Ethnicity definitions <br/> <br/> <strong>Code / description</strong> <br /> 2135-2 / Hispanic or Latino <br /> 2186-5 / Non Hispanic or Latino <br /> UNK / Unknown</td>
+</tr>
+<tr>
+<td>VISIT ARRAY</td>
+<td></td>
+<td></td>
+<td><em>Optional</em> May entirely omit the array if visit history does not exist or is unavailable.</td>
+</tr>
+<tr>
+<td>visit.visit_id</td>
+<td>Numeric</td>
+<td>16 Digit GE ID</td>
+<td>Unique GE ID for specific visit (DocumentID)</td>
+</tr>
+<tr>
+<td>visit.date</td>
+<td>Date</td>
+<td>yyyy-mm-dd hh:mm:ss.sss-hh:mm</td>
+<td>Date of visit (RFC 3339 complient date)</td>
+</tr>
+<tr>
+<td>visit.location</td>
+<td>Text</td>
+<td>&lt;N/A></td>
+<td>Text Abbreviation for facility of visit location</td>
+</tr>
+<tr>
+<td>visit.provider</td>
+<td>Text</td>
+<td>&lt;N/A></td>
+<td>Full provider name, last name, or just NPI</td>
+</tr>
+<tr>
+<td>LAB ARRAY</td>
+<td></td>
+<td></td>
+<td><em>Optional</em> May entirely omit the array if visit history does not exist or is unavailable.</td>
+</tr>
+<tr>
+<td>lab.lab_id</td>
+<td>Numeric</td>
+<td>16 Digit GE ID</td>
+<td>Unique GE ID for specific lab result (ObsID)</td>
+</tr>
+<tr>
+<td>lab.type</td>
+<td>Text</td>
+<td>"BLL"</td>
+<td>Static BLL unless we identify additional labs to include</td>
+</tr>
+<tr>
+<td>lab.date</td>
+<td>Date</td>
+<td>yyyy-mm-dd</td>
+<td>Date of lab results</td>
+</tr>
+<tr>
+<td>lab.sample_type</td>
+<td>Text</td>
+<td>V/C</td>
+<td>"V" Venous <br /> "C" for Capillary</td>
+</tr>
+<tr>
+<td>lab.result</td>
+<td>Text</td>
+<td>&lt;N/A></td>
+<td>Several values are possible; integer, non-integer numeric, ranges indicated by alphanumeric text.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="json">{
+  &quot;timestamp&quot;: &quot;2017-08-22 12:00:00.000-00:00&quot;, 
+  &quot;network_id&quot;: &quot;Alliance Health&quot;,
+  &quot;clinic_id&quot;: &quot;EF&quot;,
+  &quot;location_id&quot;: &quot;examp_loc&quot;,
+  &quot;patient_id&quot;: &quot;9000&quot;, 
+  &quot;address1&quot;: &quot;333 S State St&quot;, 
+  &quot;address2&quot;: &quot;Ste 420&quot;, 
+  &quot;city&quot;: &quot;Chicago&quot;, 
+  &quot;state&quot;: &quot;IL&quot;, 
+  &quot;zip&quot;: &quot;60653&quot;, 
+  &quot;date_of_birth&quot;: &quot;2013-07-24&quot;, 
+  &quot;gender&quot;: &quot;F&quot;, 
+  &quot;race&quot;: &quot;2054-5&quot;, 
+  &quot;ethnicity&quot;: &quot;2186-5&quot;,
+  &quot;visit&quot;: [
+    {&quot;visit_id&quot;: 1234567891011121, &quot;date&quot;: &quot;2017-07-25 15:02:54.171-00:00&quot;, &quot;location&quot;: &quot;333 S State St&quot;, &quot;provider&quot;: &quot;John Doe&quot;},
+    {&quot;visit_id&quot;: 1234567891011121, &quot;date&quot;: &quot;2017-07-25 15:02:54.171-00:00&quot;, &quot;location&quot;: &quot;333 S State St&quot;, &quot;provider&quot;: &quot;John Doe&quot;}, 
+    {&quot;visit_id&quot;: 1234567891011121, &quot;date&quot;: &quot;2017-07-25 15:02:54.171-00:00&quot;, &quot;location&quot;: &quot;333 S State St&quot;, &quot;provider&quot;: &quot;John Doe&quot;}
+  ],
+  &quot;lab&quot;: [
+    {&quot;lab_id&quot;: 1234567891011121, &quot;type&quot;: &quot;BLL&quot;, &quot;date&quot;: &quot;2016-07-29&quot;, &quot;sample_type&quot;: &quot;V&quot;, &quot;result&quot;: &quot;None Detected ug/dL&quot;}, 
+    {&quot;lab_id&quot;: 1234567891011121, &quot;type&quot;: &quot;BLL&quot;, &quot;date&quot;: &quot;2015-08-21&quot;, &quot;sample_type&quot;: &quot;V&quot;, &quot;result&quot;: &quot;16.3&quot;}, 
+    {&quot;lab_id&quot;: 1234567891011121, &quot;type&quot;: &quot;BLL&quot;, &quot;date&quot;: &quot;2015-02-27&quot;, &quot;sample_type&quot;: &quot;V&quot;, &quot;result&quot;: &quot;1&quot;}] 
+}
+</code></pre>
+
+<h3 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h3>
+<h4 id="body">Body<a class="headerlink" href="#body" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Format</th>
+<th>Constraints</th>
+<th>Notes/Questions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>version</td>
+<td>Text</td>
+<td>"0.3.0"</td>
+<td>Follows Semantic Versioning 2.0.0 http://semver.org/spec/v2.0.0.html</td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>TimeDate</td>
+<td>yyyy-mm-dd hh:mm:ss.sss-hh:mm</td>
+<td>Current Timestamp (RFC 3339 complient date).</td>
+</tr>
+<tr>
+<td>network_id</td>
+<td>Text</td>
+<td>&lt;N/A></td>
+<td>Parent entity - same value as submitted to the API.</td>
+</tr>
+<tr>
+<td>clinic_id</td>
+<td>Text</td>
+<td>&lt;N/A></td>
+<td>Organization ID - same value as submitted to the API.</td>
+</tr>
+<tr>
+<td>location_id</td>
+<td>Text</td>
+<td>&lt;N/A></td>
+<td>Specific Location Abbreviation in Centricity - same value as submitted to the API.</td>
+</tr>
+<tr>
+<td>patient_id</td>
+<td>Text</td>
+<td>AlphaNumeric</td>
+<td>Identifier for the patient - same value as submitted to the API.</td>
+</tr>
+<tr>
+<td>risk_score</td>
+<td>Text</td>
+<td>9.99</td>
+<td>Currently expecting numeric, future may be phrased by stating an odds ratio with the risk score.</td>
+</tr>
+<tr>
+<td>risk_score_notes</td>
+<td>Text</td>
+<td>&lt;N/A></td>
+<td>Additional notes (referral, remediation funds, etc to be returned to provider )</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="json">{
+    &quot;version&quot;: &quot;0.3.0&quot;, 
+    &quot;timestamp&quot;: &quot;2017-08-11 19:20:29.000-00:00&quot;, 
+    &quot;network_id&quot;: &quot;Alliance Health&quot;,
+    &quot;clinic_id&quot;: &quot;EF&quot;,
+    &quot;location_id&quot;: &quot;examp_loc&quot;,
+    &quot;patient_id&quot;: &quot;9000&quot;, 
+    &quot;risk_score&quot;: &quot;0.309&quot;, 
+    &quot;risk_score_notes&quot;: &quot;Risk Score Notes&quot;
+}
+</code></pre>
+
+<h4 id="header">Header<a class="headerlink" href="#header" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Format</th>
+<th>Constraints</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td>Integer</td>
+<td>&lt;N/A></td>
+<td>ID of the record submitted.</td>
+</tr>
+<tr>
+<td>Server</td>
+<td>Text</td>
+<td>"Apache"</td>
+<td>The type of the server providing the results</td>
+</tr>
+<tr>
+<td>Content-Location</td>
+<td>URL</td>
+<td>&lt;N/A></td>
+<td>Pernament location to retrieve the results</td>
+</tr>
+<tr>
+<td>ETag</td>
+<td></td>
+<td>&lt;N/A></td>
+<td></td>
+</tr>
+<tr>
+<td>Content-Length</td>
+<td>Integer</td>
+<td>225</td>
+<td></td>
+</tr>
+<tr>
+<td>Content-Type</td>
+<td>Text</td>
+<td>application/json</td>
+<td>Informs user that the content will be a JSON file</td>
+</tr>
+<tr>
+<td>Set-Cookie</td>
+<td>Text</td>
+<td>&lt;N/A></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code>HTTP/1.1 200 OK
+Date: Tue, 22 Aug 2017 22:49:39 GMT
+Server: Apache
+Content-Location: https://webapps1int.cityofchicago.org/ords/cdph_lead_api/test_result/get/406
+ETag: &quot;zi/wQ5GvoQFjvb4ej24v8f5PbHog14ZsjDSGJABXUxKxV3SxyOwBKrNJv7we9B5hnSs9WgeoA2h54/yVmIjcnA==&quot;
+Content-Length: 225
+Content-Type: application/json
+Set-Cookie: BIGipServerwebapps1int.cityofchicago.org-443.app~webapps1int.cityofchicago.org-443_pool=339105802.47873.0000; Secure; HttpOnly; path=/; Httponly; Secure
+</code></pre>
+
+<h3 id="retrieving-previous-predictions">Retrieving Previous Predictions<a class="headerlink" href="#retrieving-previous-predictions" title="Permanent link">&para;</a></h3>
+<p>When submitting a record for a prediction, a unique URL is given to the submission (not the individual) where the results can be retrieved in the future. </p>
+<pre><code class="bash">GET &lt;url&gt;/get/{id}
+</code></pre>
+
+<p>The response will be the <a href="#body">same as the original prediction</a>.</p>
+<div class="admonition note">
+<p>The prediction is only assigned when it is POST to the server. The score will only reflect the prediction given the data originally submitted and based on known information at that time. Retrieving old records will not update the prediction. To get a new prediction, submit a new record</p>
+</div>
+<h3 id="checking-status-on-all-submissions">Checking Status on All Submissions<a class="headerlink" href="#checking-status-on-all-submissions" title="Permanent link">&para;</a></h3>
+<p>Check the status on all submissions and whether results are available.</p>
+<pre><code class="bash">GET &lt;url&gt;/get/
+</code></pre>
+
+<h5 id="response_1">Response<a class="headerlink" href="#response_1" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Format</th>
+<th>Constraints</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>&lt;N/A></td>
+<td>ID of the record submitted.</td>
+</tr>
+<tr>
+<td>processed</td>
+<td>Text</td>
+<td>"Y" or "N"</td>
+<td>Whether the results are available. Results may be an error or blank if the record was incorrect.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="json">{&quot;items&quot;:[
+  {&quot;id&quot;:133,&quot;processed&quot;:&quot;Y&quot;},
+  {&quot;id&quot;:121,&quot;processed&quot;:&quot;Y&quot;},
+  {&quot;id&quot;:120,&quot;processed&quot;:&quot;Y&quot;},
+  {&quot;id&quot;:122,&quot;processed&quot;:&quot;Y&quot;},
+  {&quot;id&quot;:123,&quot;processed&quot;:&quot;Y&quot;}
+  ]
+}
+</code></pre>
+
+<h2 id="interpreting-risk-levels">Interpreting Risk Levels<a class="headerlink" href="#interpreting-risk-levels" title="Permanent link">&para;</a></h2>
+<p>Elevated lead levels has severe impacts on a child's mental and physical development. When the API identifies elevated blood-lead levels, doctors are highly encouraged to conduct further blood tests</p>
+<div class="admonition note">
+<p class="admonition-title">Follow-up after the blood test</p>
+<p>If elevated lead levels are confirmed by subsequent blood testing, the family has multiple options when deciding how to mitigate potential sources of lead poisoning:</p>
+<pre><code>* The City of Chicago has [limited grant funding](https://www.cityofchicago.org/city/en/depts/cdph/provdrs/inspections_and_permitting/svcs/apply_for_financialassistanceforleadabatement.html) to assist low-income homeowners and landlords of affordable housing to eliminate lead hazards.
+* Local non-profits, such as 
+* Families who rent their home from a landlord can also contact the City of Chicago for inspectors to inspect their homes for potential sources of lead poisoning. Families may dial 311 for further assistance.
+</code></pre>
+</div>
+<h2 id="terms-and-conditions">Terms and Conditions<a class="headerlink" href="#terms-and-conditions" title="Permanent link">&para;</a></h2>
+<p>Thou shalt not...</p>
+<h2 id="acknowledgements">Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permanent link">&para;</a></h2>
+<p>The "Lead Safe" API was developed by the <a href="https://www.cityofchicago.org/city/en/depts/cdph.html">Chicago Department of Public Health</a>, University of Chicago's <a href="http://dsapp.uchicago.edu/">Center for Data Science and Public Policy</a> and <a href="http://harris.uchicago.edu">Harris School of Public Policy</a>, and the <a href="https://www.cityofchicago.org/city/en/depts/doit.html">Chicago Department of Innovation and Technology</a>. This project was made possible by a grant from the <a href="http://www.rwjf.org/">Robert Wood Johnson Foundation</a>. </p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Potash <em>et al.</em> (2015) <a href="ttps://dssg.uchicago.edu/wp-content/uploads/2016/01/p2039-potash.pdf">Predictive Modeling for Public Health</a>. <em>Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em> pp. 2039-2047.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016-2017 <a href="http://www.cityofchicago.org">City of Chicago</a> and licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://twitter.com/ChicagoCDO" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://github.com/Chicago" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="mailto:developers@cityofchicago.org" class="md-footer-social__link fa fa-envelope-o"></a>
+    
+      <a href="http://dev.cityofchicago.org" class="md-footer-social__link fa fa-home"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="./assets/javascripts/application-6940329b9f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

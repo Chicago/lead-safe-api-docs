@@ -180,11 +180,6 @@ Elevated lead levels has severe impacts on a child's mental and physical develop
 		* Local non-profits, such as 
 		* Families who rent their home from a landlord can also contact the City of Chicago for inspectors to inspect their homes for potential sources of lead poisoning. Families may dial 311 for further assistance.
 
-## Terms and Conditions
-
-Thou shalt not...
-
-
 ## Acknowledgements
 
 The "Lead Safe" API was developed by the [Chicago Department of Public Health](https://www.cityofchicago.org/city/en/depts/cdph.html), University of Chicago's [Center for Data Science and Public Policy](http://dsapp.uchicago.edu/) and [Harris School of Public Policy](http://harris.uchicago.edu), and the [Chicago Department of Innovation and Technology](https://www.cityofchicago.org/city/en/depts/doit.html). This project was made possible by a grant from the [Robert Wood Johnson Foundation](http://www.rwjf.org/). 

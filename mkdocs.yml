@@ -8,6 +8,7 @@ site_url: http://dev.cityofchicago.org/docs/lead-free
 # Page Tree
 pages:
 - Home: index.md
+- 'Apply for Lead Safe': 'signup.md'
 
 # Copyright
 copyright: Copyright &copy; 2016-2017 <a href="http://www.cityofchicago.org">City of Chicago</a> and licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.

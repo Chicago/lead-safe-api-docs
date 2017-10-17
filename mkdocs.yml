@@ -23,8 +23,8 @@ site_favicon: 'assets/images/favicon.png'
 extra:
   logo: 'assets/images/city-seal-inverse-small.png'
   palette:
-    primary: 'blue grey'
-    accent: 'light blue'
+    primary: 'blue'
+    accent: 'red'
   social:
     - type: 'twitter'
       link: 'https://twitter.com/ChicagoCDO'

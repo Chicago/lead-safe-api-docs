@@ -35,26 +35,39 @@
   <option value="University of Chicago Medical Center">University of Chicago Medical Center, 5841 South Maryland</option>
   <option value="University of Illinois Medical Center at Chicago">University of Illinois Medical Center at Chicago, 740 West Taylor Avenue</option>
 </select>
-  <p>Please provide information on the lead clinical contact:</p>
-  <input type="text" name="clinical-point-of-contact" placeholder="Clinical Point of Contact">
-  <input type="text" name="clinical-title" placeholder="Clinical Title">
-  <input type="text" name="national-provider-identifer" placeholder="National Provider Identifier">
-  <input type="text" name="illinois-physician-license" placeholder="Illinois Physician License">
-  <input type="text" name="clinical-address" placeholder="Clinical contact address">
-  <input type="tel" name="clinical-telephone" placeholder="Clinical telephone number">
-  <input type="_replyto" name="clinical-email" placeholder="Clinical email address">
-  <p>Please provide contact information for the technical advisor:</p>
-  <input type="text" name="technical-point-of-contact" placeholder="Technical Point of Contact">
-  <input type="text" name="technical-title" placeholder="Technical Title">
-  <input type="text" name="technical-address" placeholder="Technical contact address">
-  <input type="tel" name="technical-telephone" placeholder="Technical telephone number">
-  <input type="email" name="technical-email" placeholder="Technical email address">
+  <h3>Please provide information on the lead clinical contact</h3>
+
+  <div style="padding-left: 10%">
+    <i class="material-icons md-36" style="font-size: 36px; position: relative; top: 10px; margin-right: 10px; padding-bottom: 10px">person</i>  <input type="text" name="clinical-point-of-contact" placeholder="Full name of clinical contact" style="font-size: 16px; display: inline-block; width: 50%; border-bottom: 1px solid #DCDCDC; box-sizing: border-box"><br />
+    <i class="material-icons md-36" style="font-size: 36px; position: relative; top: 10px; margin-right: 10px; padding-bottom: 10px">assignment</i> <input type="text" name="clinical-title" placeholder="Job title" style="font-size: 16px; display: inline-block; width: 50%; border-bottom: 1px solid #DCDCDC; box-sizing: border-box"><br />
+    <i class="material-icons md-36" style="font-size: 36px; position: relative; top: 10px; margin-right: 10px; padding-bottom: 10px">local_hospital</i><input type="text" name="national-provider-identifer" placeholder="National Provider Identifier" style="font-size: 16px; display: inline-block; width: 50%; border-bottom: 1px solid #DCDCDC; box-sizing: border-box"><br />
+    <i class="material-icons md-36" style="font-size: 36px; position: relative; top: 10px; margin-right: 10px; padding-bottom: 10px">fingerprint</i> <input type="text" name="illinois-physician-license" placeholder="Illinois Physician License" style="font-size: 16px; display: inline-block; width: 50%; border-bottom: 1px solid #DCDCDC; box-sizing: border-box"><br />
+    <i class="material-icons md-36" style="font-size: 36px; position: relative; top: 10px; margin-right: 10px; padding-bottom: 10px">place</i> <input type="text" name="clinical-address" placeholder="Work address" style="font-size: 16px; display: inline-block; width: 50%; border-bottom: 1px solid #DCDCDC; box-sizing: border-box"><br />
+    <i class="material-icons md-36" style="font-size: 36px; position: relative; top: 10px; margin-right: 10px; padding-bottom: 10px">phone</i> <input type="tel" name="clinical-telephone" placeholder="Office phone number" style="font-size: 16px; display: inline-block; width: 50%; border-bottom: 1px solid #DCDCDC; box-sizing: border-box"><br />
+    <i class="material-icons md-36" style="font-size: 36px; position: relative; top: 10px; margin-right: 10px; padding-bottom: 10px">email</i> <input type="_replyto" name="clinical-email" placeholder="Work-issued email" style="font-size: 16px; display: inline-block; width: 50%; border-bottom: 1px solid #DCDCDC; box-sizing: border-box"><br />
+  </div>
+
+  <h3>Please provide contact information for the technical advisor</h3>
+
+  <div style="padding-left: 10%">
+    <i class="material-icons md-36" style="font-size: 36px; position: relative; top: 10px; margin-right: 10px; padding-bottom: 10px">person</i> <input type="text" name="technical-point-of-contact" placeholder="Full name of technical contact" style="font-size: 16px; display: inline-block; width: 50%; border-bottom: 1px solid #DCDCDC; box-sizing: border-box" style="font-size: 16px; display: inline-block; width: 50%; border-bottom: 1px solid #DCDCDC; box-sizing: border-box"><br />
+    <i class="material-icons md-36" style="font-size: 36px; position: relative; top: 10px; margin-right: 10px; padding-bottom: 10px">assignment</i> <input type="text" name="technical-title" placeholder="Job title" style="font-size: 16px; display: inline-block; width: 50%; border-bottom: 1px solid #DCDCDC; box-sizing: border-box"><br />
+    <i class="material-icons md-36" style="font-size: 36px; position: relative; top: 10px; margin-right: 10px; padding-bottom: 10px">place</i> <input type="text" name="technical-address" placeholder="Address, City, State, ZIP" style="font-size: 16px; display: inline-block; width: 50%; border-bottom: 1px solid #DCDCDC; box-sizing: border-box"><br />
+    <i class="material-icons md-36" style="font-size: 36px; position: relative; top: 10px; margin-right: 10px; padding-bottom: 10px">phone</i> <input type="tel" name="technical-telephone" placeholder="Office phone number" style="font-size: 16px; display: inline-block; width: 50%; border-bottom: 1px solid #DCDCDC; box-sizing: border-box"><br />
+    <i class="material-icons md-36" style="font-size: 36px; position: relative; top: 10px; margin-right: 10px; padding-bottom: 10px">email</i> <input type="email" name="technical-email" placeholder="Work-issued email" style="font-size: 16px; display: inline-block; width: 50%; border-bottom: 1px solid #DCDCDC; box-sizing: border-box"><br />
+  </div>
+
+  <h3>Eligibility Criteria</h3>
+
   <input type="checkbox" name="eligibility-criteria" value="certifies-eligibility">I have read the <a href="#">eligibility criteria</a> and certify that this institution meets the minimum standards.
   <br />
+  
+  <h3>Terms of Service</h3>
+
   <p>I have read the <a href="#">Terms of Service:</a></p>
   <input type="radio" name="terms-of-service" value="accepts-terms-of-service">I accept the Terms of Service<br />
   <input type="radio" name="terms-of-service" value="rejects-terms-of-service">I do not accept the Terms of Service<br />
-  <textarea name="message" placeholder="Leave any other note"></textarea>
-  <button type="submit">Send</button>
+  <br />
+  <button type="submit" style="background-color: #EF5350; font-size: 16px; color: #fff; border-radius: 8px; display: inline-block; padding: 15px 32px; text-decoration: none; border: none; cursor: pointer">Send</button>
   <input type="hidden" name="_subject" value="Test submission: Lead Safe API Request" />
 </form>

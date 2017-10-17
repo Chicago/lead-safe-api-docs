@@ -34,6 +34,10 @@ extra:
       link: 'mailto:developers@cityofchicago.org'
     - type: 'home'
       link: 'http://dev.cityofchicago.org'
+extra_css:
+  - 'stylesheets/extra.css'
+extra_javascript:
+  - 'javascripts/extra.js'
 
 # Google Analytics
 # google_analytics:

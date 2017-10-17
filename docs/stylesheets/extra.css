@@ -33,3 +33,15 @@
 	border-bottom: 1px solid #DCDCDC; 
 	box-sizing: border-box;
 }
+
+.btn {
+	background-color: #EF5350; 
+	font-size: 16px; 
+	color: #fff; 
+	border-radius: 8px; 
+	display: inline-block; 
+	padding: 15px 32px; 
+	text-decoration: none; 
+	border: none; 
+	cursor: pointer
+}

@@ -1,3 +1,5 @@
+<p>If your institution is interested in participating in the Lead Safe program, please fill-out the following application to the Chicago Department of Public Health. All applications must have a clinician and technical contact identified before application, meet the <a href="#">eligibility requirements</a> and agree to the <a href="#">terms of service</a>. Clinicians must be licensed doctors who will help their health network use Lead Safe as part of the hospital's daily operations. The technical contact should be able to work to connect electronic medical records to the Lead Safe API. If you have any questions, please contact <a href="mailto:HealthyHomes@cityofchicago.org">HealthyHomes@cityofchicago.org</a>.</p>
+
 <form method="POST" action="http://formspree.io/developers@cityofchicago.org">
   <h3>Please select from one of the eligible health networks</h3>
   <select name="health-network" onchange="" onclick="return false;" class="selector">
@@ -41,8 +43,8 @@
   <div class="apply-form-subsection">
     <i class="material-icons md-36">person</i>  <input type="text" name="clinical-point-of-contact" placeholder="Full name of clinical contact" class="apply-placeholder"><br />
     <i class="material-icons md-36">assignment</i> <input type="text" name="clinical-title" placeholder="Job title" class="apply-placeholder"><br />
-    <i class="material-icons md-36">local_hospital</i><input type="number" name="national-provider-identifer" placeholder="National Provider Identifier" maxlength="10" class="apply-placeholder"><br />
-    <i class="material-icons md-36">fingerprint</i> <input type="text" name="illinois-physician-license" placeholder="Illinois Physician License" class="apply-placeholder"><br />
+    <i class="material-icons md-36">local_hospital</i><input type="text" name="national-provider-identifer" placeholder="National Provider Identifier" maxlength="10" class="apply-placeholder"><br />
+    <i class="material-icons md-36">fingerprint</i> <input type="text" name="illinois-physician-license" placeholder="Illinois Physician License" maxlength="9" class="apply-placeholder"><br />
     <i class="material-icons md-36">place</i> <input type="text" name="clinical-address" placeholder="Work address" class="apply-placeholder"><br />
     <i class="material-icons md-36">phone</i> <input type="tel" name="clinical-telephone" placeholder="Office phone number" class="apply-placeholder"><br />
     <i class="material-icons md-36">email</i> <input type="_replyto" name="clinical-email" placeholder="Work-issued email" class="apply-placeholder"><br />
@@ -69,4 +71,5 @@
   <br />
   <button type="submit" class="btn">Send</button>
   <input type="hidden" name="_subject" value="Test submission: Lead Safe API Request" />
+
 </form>

@@ -71,5 +71,6 @@
   <br />
   <button type="submit" class="btn">Send</button>
   <input type="hidden" name="_subject" value="Test submission: Lead Safe API Request" />
+  <input type="hidden" name="_cc" value="developers@cityofchicago.org" />
 
 </form>

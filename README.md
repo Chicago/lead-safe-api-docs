@@ -25,3 +25,13 @@ Commit and push changes to the server.
 ## License
 
 Copyright &copy; 2017 City of Chicago. Documentation is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
+
+## Configuration
+
+### Emailing Forms
+
+The application process uses [Formspree.io](http://formspree.io). Currently using the free service, which limits to 1,000 submissions per month. This can be modified in the `<forms>` element in `docs/apply.md`
+
+### List of Eligible Health Networks
+
+The list of eligible health networks is in `docs/apply.md`. Each institution is listed as an `<option>`

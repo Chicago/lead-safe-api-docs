@@ -1,0 +1,47 @@
+.selector {
+	position: relative; 
+	float: left; 
+	min-height: 60px; 
+	box-shadow: 1px 2px 10px -2px rgba(0,0,0,0.3); 
+	border-radius: 3px; 
+	font-size: 16px; 
+	margin-left: 10px; 
+	padding-left: 10px;
+}
+
+.apply-form-subsection {
+	padding-left: 10%;
+}
+
+
+/* Material Icons */
+
+.material-icons {
+	font-size: 36px; 
+	color: #757575; 
+	position: relative; 
+	top: 10px; 
+	margin-right: 10px; 
+	padding-bottom: 10px
+}
+
+.apply-placeholder {
+	font-size: 16px; 
+	display: inline-block; 
+	min-width: 200px; 
+	width: 50%; 
+	border-bottom: 1px solid #DCDCDC; 
+	box-sizing: border-box;
+}
+
+.btn {
+	background-color: #EF5350; 
+	font-size: 16px; 
+	color: #fff; 
+	border-radius: 8px; 
+	display: inline-block; 
+	padding: 15px 32px; 
+	text-decoration: none; 
+	border: none; 
+	cursor: pointer
+}

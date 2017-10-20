@@ -1,6 +1,6 @@
 
 # Site Information
-site_name: Lead Safe API v0.5.0-alpha1
+site_name: Lead Safe API v0.5.0-alpha2
 site_author: City of Chicago
 site_description: Lead Free API Documentation
 site_url: http://dev.cityofchicago.org/docs/lead-free
@@ -8,6 +8,9 @@ site_url: http://dev.cityofchicago.org/docs/lead-free
 # Page Tree
 pages:
 - Home: index.md
+- 'Lead FAQ':
+  - English: 'faq/lead-faq-en.md'
+  - Español: 'faq/lead-faq-es.md'
 - 'Apply for Lead Safe': 'apply.md'
 
 # Copyright
@@ -36,8 +39,8 @@ extra:
       link: 'http://dev.cityofchicago.org'
 extra_css:
   - 'stylesheets/extra.css'
-extra_javascript:
-  - 'javascripts/extra.js'
+# extra_javascript:
+#   - 'javascripts/extra.js'
 
 # Google Analytics
 # google_analytics:

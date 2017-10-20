@@ -1,3 +1,66 @@
+/*
+    Formatting button
+*/
+
+/* Material style button */
+.btn {
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 2px;
+  font-size: 22px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+  background: #EF5350;
+}
+
+/* Ripple magic */
+.btn{
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, .5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+.btn:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
+
+
+
+/* 
+    Formatting Application Form
+*/
+
+/* Format input selector */
+
 .selector {
 	position: relative; 
 	float: left; 
@@ -9,6 +72,7 @@
 	padding-left: 10px;
 }
 
+/* Indent form section */
 .apply-form-subsection {
 	padding-left: 10%;
 }
@@ -25,6 +89,8 @@
 	padding-bottom: 10px
 }
 
+/* Formatting placeholder text for application form */
+
 .apply-placeholder {
 	font-size: 16px; 
 	display: inline-block; 
@@ -32,16 +98,4 @@
 	width: 50%; 
 	border-bottom: 1px solid #DCDCDC; 
 	box-sizing: border-box;
-}
-
-.btn {
-	background-color: #EF5350; 
-	font-size: 16px; 
-	color: #fff; 
-	border-radius: 8px; 
-	display: inline-block; 
-	padding: 15px 32px; 
-	text-decoration: none; 
-	border: none; 
-	cursor: pointer
 }

@@ -187,13 +187,15 @@ The API will return codes to indicate whether the prediction encountered any err
 | Address outside of Chicago  | 412          | Address is outside of Chicago or address failed to be geocoded within Chicago.               |
 
 ```json
-"errors": [
+"errors":
+  [
     {
-         "message": "An error message which conveys details",
-         "code":100
+      "message": "An error message which conveys details",
+      "code": 400
     }
- ]
- ```
+  ]
+```
+
 
 ## Interpreting Risk Levels
 

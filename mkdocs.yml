@@ -1,6 +1,6 @@
 
 # Site Information
-site_name: Lead Safe API v0.5.0-alpha1
+site_name: Lead Safe API v0.5.0-alpha2
 site_author: City of Chicago
 site_description: Lead Free API Documentation
 site_url: http://dev.cityofchicago.org/docs/lead-free
@@ -8,6 +8,7 @@ site_url: http://dev.cityofchicago.org/docs/lead-free
 # Page Tree
 pages:
 - Home: index.md
+- 'Terms of Service': 'tos.md'
 - 'Apply for Lead Safe': 'apply.md'
 
 # Copyright

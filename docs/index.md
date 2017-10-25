@@ -169,6 +169,32 @@ GET <url>/get/
 }
 ```
 
+### Response Codes
+
+The API will return codes to indicate whether the prediction encountered any errors. Often, error codes will be accompanied by a longer explanation of the error in addition to the brief explanations below.
+
+|         Error Name          |  Error Code  |                                    Error Explanation                                         |
+|-----------------------------|:------------:|----------------------------------------------------------------------------------------------|
+| Success                     | 200          | No error.                                                                                    |
+| Missing data field          | 400          | A required field was not included in the submission.                                         |
+| Incorrect data type         | 400          | A field contained an unexpected data type that does not match submission requirements.       |
+| Incorrect date format       | 400          | One of the date formats is incorrect.                                                        |
+| Invalid JSON                | 400          | JSON structure was incomplete, contained unexpected characters, or was not properly closed.  |
+| Invalid race/ethnicity code | 400          | Value used to encode race or ethnicity does not match an expected value.                     |
+| Unauthorized                | 401          | Failed to provide authentication key or provided invalid key.                                |
+| Not Found                   | 404          | The URI requested is invalid or does not exist.                                              |
+| Child over 1 years-old      | 412          | The child is ineligible for Lead Safe.                                                       |
+| Address outside of Chicago  | 412          | Address is outside of Chicago or address failed to be geocoded within Chicago.               |
+
+```json
+"errors": [
+    {
+         "message": "An error message which conveys details",
+         "code":100
+    }
+ ]
+ ```
+
 ## Interpreting Risk Levels
 
 Elevated lead levels has severe impacts on a child's mental and physical development. When the API identifies elevated blood-lead levels, doctors are highly encouraged to conduct further blood tests

@@ -7,9 +7,9 @@ site_url: http://dev.cityofchicago.org/docs/lead-free
 
 # Page Tree
 pages:
-- Home: index.md
-- 'Terms of Service': 'tos.md'
-- 'Apply for Lead Safe': 'apply.md'
+  - Home: index.md
+  - 'Terms of Service': 'tos.md'
+  - 'Apply for Lead Safe': 'apply.md'
 
 # Copyright
 copyright: Copyright &copy; 2016-2017 <a href="http://www.cityofchicago.org">City of Chicago</a> and licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
@@ -20,7 +20,7 @@ copyright: Copyright &copy; 2016-2017 <a href="http://www.cityofchicago.org">Cit
 
 # Theme
 theme_dir: 'theme/material'
-site_favicon: 'assets/images/favicon.png'
+site_favicon: 'assets/images/favicon.ico'
 extra:
   logo: 'assets/images/city-seal-inverse-small.png'
   palette:

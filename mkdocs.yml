@@ -1,12 +1,13 @@
 
 # Site Information
-site_name: Lead Safe API v0.5.0-alpha3
+site_name: Lead Safe API v0.5.0-alpha4
 site_author: City of Chicago
 site_description: Lead Free API Documentation
 site_url: http://dev.cityofchicago.org/docs/lead-free
 
 # Page Tree
 pages:
+
 - Home: index.md
 - 'Clinical Content':
   - 'FAQ':
@@ -25,7 +26,7 @@ copyright: Copyright &copy; 2016-2017 <a href="http://www.cityofchicago.org">Cit
 
 # Theme
 theme_dir: 'theme/material'
-site_favicon: 'assets/images/favicon.png'
+site_favicon: 'assets/images/favicon.ico'
 extra:
   logo: 'assets/images/city-seal-inverse-small.png'
   palette:

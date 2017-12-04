@@ -173,7 +173,7 @@ GET <url>/get/
 
 The API will return codes to indicate whether the prediction encountered any errors. Often, error codes will be accompanied by a longer explanation of the error in addition to the brief explanations below.
 
-|         Error Name          |  Error Code  |                                    Error Explanation                                         |
+|        Status Class         | Status Code  |                                    Status Message                                            |
 |-----------------------------|:------------:|----------------------------------------------------------------------------------------------|
 | Success                     | 200          | No error.                                                                                    |
 | Missing data field          | 400          | A required field was not included in the submission.                                         |

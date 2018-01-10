@@ -42,6 +42,8 @@ Access privileges to API services and Data are granted at the sole discretion of
 
 Usage is limited and will be monitored. Excessive usage, in the sole and complete discretion of the City, may be grounds for imposing usage caps or for termination of service. If You plan to make heavy use of the API service, please notify the City prior to such use. The City, in its complete discretion, may allow You to avoid limitations on usage.
 
+The use of the API precludes healthcare provider(s) and all staff, including third-party contractors, from the healthcare facility from transferring data or publishing any results derived from its activities hereunder and will not disclose any results or other material based upon data provided by the City without written permission from the City.
+
 The City reserves the right to track and publish aggregate statistics on usage per application.
 
 When using the API, attribution of the City as the API source is appreciated but not required. However, You and Your application must not express or imply any affiliation or relationship with or sponsorship or endorsement by the City.

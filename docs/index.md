@@ -1,4 +1,4 @@
-"Lead Safe" is an API available to Chicago-area hospital and health networks to estimate  the likelihood that a child will be exposed to lead-based paint hazards. Health network providers can provide information on the patient's demographics, address, and history on their past visits and blood-lead levels, the Lead Safe API will provide an estimate of the risk of elevated, unsafe blood-lead levels for children under 4 years-old.
+"Lead Safe" is an API available to Chicago-area hospital and health networks to estimate the likelihood that a child will be exposed to lead-based paint hazards. Health network providers can provide information on the patient's demographics, address, and history on their past visits and blood-lead levels, the Lead Safe API will provide an estimate of the risk of elevated, unsafe blood-lead levels for children under 4 years-old.
 
 The API uses a predictive model developed by the University of Chicago[^1] that uses historical blood-lead level testing conducted by the State of Illinois. Data submitted through this API and subsequent testing conducted will improve the accuracy of the model, allowing for a more effective use of blood tests to prevent elevated lead levels.
 
@@ -6,7 +6,7 @@ The API uses a predictive model developed by the University of Chicago[^1] that 
 
 ### Eligibility
 
-To access the API, fill out [this form](#) to be contacted by the Chicago Department of Public Health. The city will need to verify your eligiblity as an area health provider.
+To access the API, fill out [this form](#) to be contacted by the Chicago Department of Public Health. The city will need to verify your eligibility as an area health provider.
 
 ### Accessing API
 
@@ -24,7 +24,7 @@ POST {json file} <url>/insert/
 
 | Field           | Format   | Constraints                        | Notes                                                                                                             |
 |-----------------|----------|------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| timestamp       | TimeDate | yyyy-mm-dd hh:mm:ss.sss-hh:mm      | Current timestamp (RFC 3339 complient date)                                                                       |
+| timestamp       | TimeDate | yyyy-mm-dd hh:mm:ss.sss-hh:mm      | Current timestamp (RFC 3339 compliant date)                                                                       |
 | network_id      | Text     | <N/A\>                             | The parent entity of the submitting organization                                                                  |
 | clinic_id       | Text     | <N/A\>                             | Organization ID                                                                                                   |
 | location_id     | Text     | <N/A\>                             | Specific Location Abbreviation in Centricity                                                                      |
@@ -37,7 +37,7 @@ POST {json file} <url>/insert/
 | date_of_birth   | Date     | yyyy-mm-dd                         | Patient date of birth                                                                                             |
 | gender          | Text     | M/F/U                              | Patient gender                                                                                                    |
 | race            | Text     | Code Values from Centricity        | Standard ONC Race definitions <br /> <br /> **Code / description** <br /> 1002-5 / American Indian or Alaska Native <br /> 2028-9 / Asian <br /> 2054-5 / Black or African American <br /> 2076-8 / Native Hawaiian or Other Pacific Islander <br /> 2106-3 / White <br /> UNK / Unknown |
-| ethnicity       | Text     | Code Values from Centricity        | Standard ONC Ethnicity definitions <br/> <br/> **Code / description** <br /> 2135-2 / Hispanic or Latino <br /> 2186-5 / Non Hispanic or Latino <br /> UNK / Unknown |
+| ethnicity       | Text     | Code Values from Centricity        | Standard ONC Ethnicity definitions <br/> <br/> **Code / description** <br /> 2135-2 / Hispanic or Latino <br /> 2186-5 / Non-Hispanic or Latino <br /> UNK / Unknown |
 | VISIT ARRAY     |          |                                    | _Optional_ May entirely omit the array if visit history does not exist or is unavailable.  |
 | visit.visit_id  | Numeric  | 16 Digit GE ID                     | Unique GE ID for specific visit (DocumentID)                                                                      |
 | visit.date      | Date     | yyyy-mm-dd hh:mm:ss.sss-hh:mm      | Date of visit (RFC 3339 complient date)                                                                           |
@@ -85,7 +85,7 @@ POST {json file} <url>/insert/
 | Field            | Format   | Constraints                   | Notes/Questions                                                                            |
 |------------------|----------|-------------------------------|--------------------------------------------------------------------------------------------|
 | version          | Text     | "0.3.0"                       | Follows Semantic Versioning 2.0.0 http://semver.org/spec/v2.0.0.html                       |
-| timestamp        | TimeDate | yyyy-mm-dd hh:mm:ss.sss-hh:mm | Current Timestamp (RFC 3339 complient date).                                               |
+| timestamp        | TimeDate | yyyy-mm-dd hh:mm:ss.sss-hh:mm | Current Timestamp (RFC 3339 compliant date).                                               |
 | network_id       | Text     | <N/A\>                        | Parent entity - same value as submitted to the API.                                        |
 | clinic_id        | Text     | <N/A\>                        | Organization ID - same value as submitted to the API.                                      |
 | location_id      | Text     | <N/A\>                        | Specific Location Abbreviation in Centricity - same value as submitted to the API.         |
@@ -112,7 +112,7 @@ POST {json file} <url>/insert/
 |------------------|--------------|------------------|---------------------------------------------------------------------------------------------|
 | Date             | Integer      | <N/A\>           | ID of the record submitted.                                                                 |
 | Server           | Text         | "Apache"         | The type of the server providing the results                                                |
-| Content-Location | URL          | <N/A\>           | Pernament location to retrieve the results                                                  |
+| Content-Location | URL          | <N/A\>           | Permanent location to retrieve the results                                                  |
 | ETag             |              | <N/A\>           |                                                                                             |
 | Content-Length   | Integer      | 225              |                                                                                             |
 | Content-Type     | Text         | application/json | Informs user that the content will be a JSON file                                           |
@@ -199,7 +199,7 @@ The API will return codes to indicate whether the prediction encountered any err
 
 ## Interpreting Risk Levels
 
-Elevated lead levels has severe impacts on a child's mental and physical development. When the API identifies elevated blood-lead levels, doctors are highly encouraged to conduct further blood tests
+Elevated lead levels have severe impacts on a child's mental and physical development. When the API identifies elevated blood-lead levels, doctors are highly encouraged to conduct further blood tests
 
 !!! note "Follow-up after the blood test"
 	If elevated lead levels are confirmed by subsequent blood testing, the family has multiple options when deciding how to mitigate potential sources of lead poisoning:
@@ -212,4 +212,4 @@ Elevated lead levels has severe impacts on a child's mental and physical develop
 
 The "Lead Safe" API was developed by the [Chicago Department of Public Health](https://www.cityofchicago.org/city/en/depts/cdph.html), University of Chicago's [Center for Data Science and Public Policy](http://dsapp.uchicago.edu/) and [Harris School of Public Policy](http://harris.uchicago.edu), and the [Chicago Department of Innovation and Technology](https://www.cityofchicago.org/city/en/depts/doit.html). This project was made possible by a grant from the [Robert Wood Johnson Foundation](http://www.rwjf.org/). 
 
-[^1]: Potash _et al._ (2015) [Predictive Modeling for Public Health](ttps://dssg.uchicago.edu/wp-content/uploads/2016/01/p2039-potash.pdf). _Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining_ pp. 2039-2047.
+[^1]: Potash _et al._ (2015) [Predictive Modeling for Public Health](https://dssg.uchicago.edu/wp-content/uploads/2016/01/p2039-potash.pdf). _Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining_ pp. 2039-2047.

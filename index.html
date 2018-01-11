@@ -16,13 +16,13 @@
         <meta name="author" content="City of Chicago">
       
       
-        <link rel="shortcut icon" href="./assets/images/favicon.png">
+        <link rel="shortcut icon" href="./assets/images/favicon.ico">
       
       <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
     
     
       
-        <title>Lead Safe API v0.4.0</title>
+        <title>Lead Safe API v0.5.0</title>
       
     
     
@@ -45,13 +45,15 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
+      <link rel="stylesheet" href="./stylesheets/extra.css">
+    
     
   </head>
   
   
   
   
-    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+    <body data-md-color-primary="blue" data-md-color-accent="red">
   
     <svg class="md-svg">
       <defs>
@@ -68,7 +70,7 @@
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <a href="http://dev.cityofchicago.org/docs/lead-free" title="Lead Safe API v0.4.0" class="md-logo md-header-nav__button">
+          <a href="http://dev.cityofchicago.org/docs/lead-free" title="Lead Safe API v0.5.0" class="md-logo md-header-nav__button">
             <img src="./assets/images/city-seal-inverse-small.png" width="24" height="24">
           </a>
         
@@ -134,7 +136,7 @@
         <img src="./assets/images/city-seal-inverse-small.png">
       </i>
     
-    Lead Safe API v0.4.0
+    Lead Safe API v0.5.0
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -263,6 +265,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#response-codes" title="Response Codes" class="md-nav__link">
+    Response Codes
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -271,13 +280,6 @@
         <li class="md-nav__item">
   <a href="#interpreting-risk-levels" title="Interpreting Risk Levels" class="md-nav__link">
     Interpreting Risk Levels
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#terms-and-conditions" title="Terms and Conditions" class="md-nav__link">
-    Terms and Conditions
   </a>
   
 </li>
@@ -295,6 +297,114 @@
   
 </nav>
     
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Clinical Content
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Clinical Content
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="clinical-content/lead-faq-en/" title="English" class="md-nav__link">
+      English
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="clinical-content/lead-faq-es/" title="Español" class="md-nav__link">
+      Español
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="clinical-content/elevated-bll-map/" title="Map of Elevated BLL" class="md-nav__link">
+      Map of Elevated BLL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="tos/" title="Terms of Service" class="md-nav__link">
+      Terms of Service
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="apply/" title="Apply for Lead Safe" class="md-nav__link">
+      Apply for Lead Safe
+    </a>
   </li>
 
     
@@ -412,6 +522,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#response-codes" title="Response Codes" class="md-nav__link">
+    Response Codes
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -420,13 +537,6 @@
         <li class="md-nav__item">
   <a href="#interpreting-risk-levels" title="Interpreting Risk Levels" class="md-nav__link">
     Interpreting Risk Levels
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#terms-and-conditions" title="Terms and Conditions" class="md-nav__link">
-    Terms and Conditions
   </a>
   
 </li>
@@ -455,11 +565,11 @@
                 
                   <h1>Home</h1>
                 
-                <p>"Lead Safe" is an API available to Chicago-area hospital and health networks to estimate  the likelihood that a child will be exposed to lead-based paint hazards. Health network providers can provide information on the patient's demographics, address, and history on their past visits and blood-lead levels, the Lead Safe API will provide an estimate of the risk of elevated, unsafe blood-lead levels for children under 4 years-old.</p>
+                <p>"Lead Safe" is an API available to Chicago-area hospital and health networks to estimate the likelihood that a child will be exposed to lead-based paint hazards. Health network providers can provide information on the patient's demographics, address, and history on their past visits and blood-lead levels, the Lead Safe API will provide an estimate of the risk of elevated, unsafe blood-lead levels for children under 4 years-old.</p>
 <p>The API uses a predictive model developed by the University of Chicago<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> that uses historical blood-lead level testing conducted by the State of Illinois. Data submitted through this API and subsequent testing conducted will improve the accuracy of the model, allowing for a more effective use of blood tests to prevent elevated lead levels.</p>
 <h2 id="obtaining-access">Obtaining Access<a class="headerlink" href="#obtaining-access" title="Permanent link">&para;</a></h2>
 <h3 id="eligibility">Eligibility<a class="headerlink" href="#eligibility" title="Permanent link">&para;</a></h3>
-<p>To access the API, fill out <a href="#">this form</a> to be contacted by the Chicago Department of Public Health. The city will need to verify your eligiblity as an area health provider.</p>
+<p>To access the API, fill out <a href="#">this form</a> to be contacted by the Chicago Department of Public Health. The city will need to verify your eligibility as an area health provider.</p>
 <h3 id="accessing-api">Accessing API<a class="headerlink" href="#accessing-api" title="Permanent link">&para;</a></h3>
 <p>In order to integrate with Lead Safe, the health provider will need to make a REST call against the API. To do so, they will be provided an API token which will provide some authentication. The city will also need to "whitelist" the IP address(es) of the health providers servers.</p>
 <h2 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h2>
@@ -482,7 +592,7 @@
 <td>timestamp</td>
 <td>TimeDate</td>
 <td>yyyy-mm-dd hh:mm:ss.sss-hh:mm</td>
-<td>Current timestamp (RFC 3339 complient date)</td>
+<td>Current timestamp (RFC 3339 compliant date)</td>
 </tr>
 <tr>
 <td>network_id</td>
@@ -560,7 +670,7 @@
 <td>ethnicity</td>
 <td>Text</td>
 <td>Code Values from Centricity</td>
-<td>Standard ONC Ethnicity definitions <br/> <br/> <strong>Code / description</strong> <br /> 2135-2 / Hispanic or Latino <br /> 2186-5 / Non Hispanic or Latino <br /> UNK / Unknown</td>
+<td>Standard ONC Ethnicity definitions <br/> <br/> <strong>Code / description</strong> <br /> 2135-2 / Hispanic or Latino <br /> 2186-5 / Non-Hispanic or Latino <br /> UNK / Unknown</td>
 </tr>
 <tr>
 <td>VISIT ARRAY</td>
@@ -679,7 +789,7 @@
 <td>timestamp</td>
 <td>TimeDate</td>
 <td>yyyy-mm-dd hh:mm:ss.sss-hh:mm</td>
-<td>Current Timestamp (RFC 3339 complient date).</td>
+<td>Current Timestamp (RFC 3339 compliant date).</td>
 </tr>
 <tr>
 <td>network_id</td>
@@ -758,7 +868,7 @@
 <td>Content-Location</td>
 <td>URL</td>
 <td>&lt;N/A></td>
-<td>Pernament location to retrieve the results</td>
+<td>Permanent location to retrieve the results</td>
 </tr>
 <tr>
 <td>ETag</td>
@@ -845,8 +955,80 @@ Set-Cookie: BIGipServerwebapps1int.cityofchicago.org-443.app~webapps1int.cityofc
 }
 </code></pre>
 
+<h3 id="response-codes">Response Codes<a class="headerlink" href="#response-codes" title="Permanent link">&para;</a></h3>
+<p>The API will return codes to indicate whether the prediction encountered any errors. Often, error codes will be accompanied by a longer explanation of the error in addition to the brief explanations below.</p>
+<table>
+<thead>
+<tr>
+<th>Status Class</th>
+<th align="center">Status Code</th>
+<th>Status Message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Success</td>
+<td align="center">200</td>
+<td>No error.</td>
+</tr>
+<tr>
+<td>Missing data field</td>
+<td align="center">400</td>
+<td>A required field was not included in the submission.</td>
+</tr>
+<tr>
+<td>Incorrect data type</td>
+<td align="center">400</td>
+<td>A field contained an unexpected data type that does not match submission requirements.</td>
+</tr>
+<tr>
+<td>Incorrect date format</td>
+<td align="center">400</td>
+<td>One of the date formats is incorrect.</td>
+</tr>
+<tr>
+<td>Invalid JSON</td>
+<td align="center">400</td>
+<td>JSON structure was incomplete, contained unexpected characters, or was not properly closed.</td>
+</tr>
+<tr>
+<td>Invalid race/ethnicity code</td>
+<td align="center">400</td>
+<td>Value used to encode race or ethnicity does not match an expected value.</td>
+</tr>
+<tr>
+<td>Unauthorized</td>
+<td align="center">401</td>
+<td>Failed to provide authentication key or provided invalid key.</td>
+</tr>
+<tr>
+<td>Not Found</td>
+<td align="center">404</td>
+<td>The URI requested is invalid or does not exist.</td>
+</tr>
+<tr>
+<td>Child over 1 years-old</td>
+<td align="center">412</td>
+<td>The child is ineligible for Lead Safe.</td>
+</tr>
+<tr>
+<td>Address outside of Chicago</td>
+<td align="center">412</td>
+<td>Address is outside of Chicago or address failed to be geocoded within Chicago.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="json">&quot;errors&quot;:
+  [
+    {
+      &quot;message&quot;: &quot;An error message which conveys details&quot;,
+      &quot;code&quot;: 400
+    }
+  ]
+</code></pre>
+
 <h2 id="interpreting-risk-levels">Interpreting Risk Levels<a class="headerlink" href="#interpreting-risk-levels" title="Permanent link">&para;</a></h2>
-<p>Elevated lead levels has severe impacts on a child's mental and physical development. When the API identifies elevated blood-lead levels, doctors are highly encouraged to conduct further blood tests</p>
+<p>Elevated lead levels have severe impacts on a child's mental and physical development. When the API identifies elevated blood-lead levels, doctors are highly encouraged to conduct further blood tests</p>
 <div class="admonition note">
 <p class="admonition-title">Follow-up after the blood test</p>
 <p>If elevated lead levels are confirmed by subsequent blood testing, the family has multiple options when deciding how to mitigate potential sources of lead poisoning:</p>
@@ -855,15 +1037,13 @@ Set-Cookie: BIGipServerwebapps1int.cityofchicago.org-443.app~webapps1int.cityofc
 * Families who rent their home from a landlord can also contact the City of Chicago for inspectors to inspect their homes for potential sources of lead poisoning. Families may dial 311 for further assistance.
 </code></pre>
 </div>
-<h2 id="terms-and-conditions">Terms and Conditions<a class="headerlink" href="#terms-and-conditions" title="Permanent link">&para;</a></h2>
-<p>Thou shalt not...</p>
 <h2 id="acknowledgements">Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permanent link">&para;</a></h2>
 <p>The "Lead Safe" API was developed by the <a href="https://www.cityofchicago.org/city/en/depts/cdph.html">Chicago Department of Public Health</a>, University of Chicago's <a href="http://dsapp.uchicago.edu/">Center for Data Science and Public Policy</a> and <a href="http://harris.uchicago.edu">Harris School of Public Policy</a>, and the <a href="https://www.cityofchicago.org/city/en/depts/doit.html">Chicago Department of Innovation and Technology</a>. This project was made possible by a grant from the <a href="http://www.rwjf.org/">Robert Wood Johnson Foundation</a>. </p>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p>Potash <em>et al.</em> (2015) <a href="ttps://dssg.uchicago.edu/wp-content/uploads/2016/01/p2039-potash.pdf">Predictive Modeling for Public Health</a>. <em>Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em> pp. 2039-2047.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>Potash <em>et al.</em> (2015) <a href="https://dssg.uchicago.edu/wp-content/uploads/2016/01/p2039-potash.pdf">Predictive Modeling for Public Health</a>. <em>Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em> pp. 2039-2047.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -881,6 +1061,27 @@ Set-Cookie: BIGipServerwebapps1int.cityofchicago.org-443.app~webapps1int.cityofc
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="clinical-content/lead-faq-en/" title="English" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                English
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -923,6 +1124,8 @@ Set-Cookie: BIGipServerwebapps1int.cityofchicago.org-443.app~webapps1int.cityofc
       
       
       <script>app.initialize({url:{base:"."}})</script>
+      
+        <script src="./javascript/extra.js"></script>
       
     
     

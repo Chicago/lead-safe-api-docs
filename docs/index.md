@@ -6,7 +6,7 @@ The API uses a predictive model developed by the University of Chicago[^1] that 
 
 ### Eligibility
 
-To access the API, fill out [this form](#) to be contacted by the Chicago Department of Public Health. The city will need to verify your eligibility as an area health provider.
+To access the API, fill out [this form](/apply/) to be contacted by the Chicago Department of Public Health. The city will need to verify your eligibility as an area health provider.
 
 ### Accessing API
 

@@ -22,7 +22,7 @@
     
     
       
-        <title>Lead Safe API v0.5.0</title>
+        <title>Lead Safe API v0.6.0</title>
       
     
     
@@ -70,7 +70,7 @@
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <a href="http://dev.cityofchicago.org/docs/lead-free" title="Lead Safe API v0.5.0" class="md-logo md-header-nav__button">
+          <a href="http://dev.cityofchicago.org/docs/lead-free" title="Lead Safe API v0.6.0" class="md-logo md-header-nav__button">
             <img src="./assets/images/city-seal-inverse-small.png" width="24" height="24">
           </a>
         
@@ -136,7 +136,7 @@
         <img src="./assets/images/city-seal-inverse-small.png">
       </i>
     
-    Lead Safe API v0.5.0
+    Lead Safe API v0.6.0
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -305,35 +305,28 @@
       
 
 
+  <li class="md-nav__item">
+    <a href="apply/" title="Apply for Lead Safe" class="md-nav__link">
+      Apply for Lead Safe
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
-    <label class="md-nav__link" for="nav-2">
-      Clinical Content
+    <label class="md-nav__link" for="nav-3">
+      FAQ about Lead Poisoning
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        Clinical Content
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
-    
-    <label class="md-nav__link" for="nav-2-1">
-      FAQ
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-1">
-        FAQ
+      <label class="md-nav__title" for="nav-3">
+        FAQ about Lead Poisoning
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -344,7 +337,7 @@
 
 
   <li class="md-nav__item">
-    <a href="clinical-content/lead-faq-en/" title="English" class="md-nav__link">
+    <a href="faq/lead-faq-en/" title="English" class="md-nav__link">
       English
     </a>
   </li>
@@ -356,7 +349,7 @@
 
 
   <li class="md-nav__item">
-    <a href="clinical-content/lead-faq-es/" title="Español" class="md-nav__link">
+    <a href="faq/lead-faq-es/" title="Español" class="md-nav__link">
       Español
     </a>
   </li>
@@ -366,21 +359,28 @@
     </nav>
   </li>
 
-        
-          
-          
-          
+    
+      
+      
+      
 
 
   <li class="md-nav__item">
-    <a href="clinical-content/elevated-bll-map/" title="Map of Elevated BLL" class="md-nav__link">
+    <a href="elevated-bll-map/" title="Map of Elevated BLL" class="md-nav__link">
       Map of Elevated BLL
     </a>
   </li>
 
-        
-      </ul>
-    </nav>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="eligibility-criteria/" title="Eligibility Criteria" class="md-nav__link">
+      Eligibility Criteria
+    </a>
   </li>
 
     
@@ -392,18 +392,6 @@
   <li class="md-nav__item">
     <a href="tos/" title="Terms of Service" class="md-nav__link">
       Terms of Service
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="apply/" title="Apply for Lead Safe" class="md-nav__link">
-      Apply for Lead Safe
     </a>
   </li>
 
@@ -569,7 +557,7 @@
 <p>The API uses a predictive model developed by the University of Chicago<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> that uses historical blood-lead level testing conducted by the State of Illinois. Data submitted through this API and subsequent testing conducted will improve the accuracy of the model, allowing for a more effective use of blood tests to prevent elevated lead levels.</p>
 <h2 id="obtaining-access">Obtaining Access<a class="headerlink" href="#obtaining-access" title="Permanent link">&para;</a></h2>
 <h3 id="eligibility">Eligibility<a class="headerlink" href="#eligibility" title="Permanent link">&para;</a></h3>
-<p>To access the API, fill out <a href="#">this form</a> to be contacted by the Chicago Department of Public Health. The city will need to verify your eligibility as an area health provider.</p>
+<p>To access the API, fill out <a href="./apply/">this form</a> to be contacted by the Chicago Department of Public Health. The city will need to verify your eligibility as an area health provider.</p>
 <h3 id="accessing-api">Accessing API<a class="headerlink" href="#accessing-api" title="Permanent link">&para;</a></h3>
 <p>In order to integrate with Lead Safe, the health provider will need to make a REST call against the API. To do so, they will be provided an API token which will provide some authentication. The city will also need to "whitelist" the IP address(es) of the health providers servers.</p>
 <h2 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h2>
@@ -1066,13 +1054,13 @@ Set-Cookie: BIGipServerwebapps1int.cityofchicago.org-443.app~webapps1int.cityofc
       <nav class="md-footer-nav__inner md-grid">
         
         
-          <a href="clinical-content/lead-faq-en/" title="English" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="apply/" title="Apply for Lead Safe" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                English
+                Apply for Lead Safe
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

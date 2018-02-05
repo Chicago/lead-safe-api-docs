@@ -4,31 +4,7 @@
     
     <url>
      <loc>http://dev.cityofchicago.org/docs/lead-free/</loc>
-     <lastmod>2018-01-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-        
-    <url>
-     <loc>http://dev.cityofchicago.org/docs/lead-free</loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://dev.cityofchicago.org/docs/lead-free/clinical-content/elevated-bll-map/</loc>
-     <lastmod>2018-01-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-    <url>
-     <loc>http://dev.cityofchicago.org/docs/lead-free/tos/</loc>
-     <lastmod>2018-01-11</lastmod>
+     <lastmod>2018-02-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -36,7 +12,47 @@
     
     <url>
      <loc>http://dev.cityofchicago.org/docs/lead-free/apply/</loc>
-     <lastmod>2018-01-11</lastmod>
+     <lastmod>2018-02-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>http://dev.cityofchicago.org/docs/lead-free/faq/lead-faq-en/</loc>
+     <lastmod>2018-02-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://dev.cityofchicago.org/docs/lead-free/faq/lead-faq-es/</loc>
+     <lastmod>2018-02-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>http://dev.cityofchicago.org/docs/lead-free/elevated-bll-map/</loc>
+     <lastmod>2018-02-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>http://dev.cityofchicago.org/docs/lead-free/eligibility-criteria/</loc>
+     <lastmod>2018-02-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>http://dev.cityofchicago.org/docs/lead-free/tos/</loc>
+     <lastmod>2018-02-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

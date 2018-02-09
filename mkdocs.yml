@@ -10,6 +10,7 @@ pages:
 
 - Home: index.md
 - 'Apply for Lead Safe': 'apply.md'
+- 'API Documentation': 'api.md'
 - 'FAQ about Lead Poisoning':
   - English: 'faq/lead-faq-en.md'
   - Español: 'faq/lead-faq-es.md'

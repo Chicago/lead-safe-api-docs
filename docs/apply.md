@@ -1,4 +1,4 @@
-<p>If your institution is interested in participating in the Lead Safe program, please fill-out the following application to the Chicago Department of Public Health. All applications must have a clinician and technical contact identified before application, meet the <a href="/eligibility-criteria/">eligibility requirements</a> and agree to the <a href="/tos/">terms of service</a>. Clinicians must be licensed doctors who will help their health network use Lead Safe as part of the hospital's daily operations. The technical contact should be able to work to connect electronic medical records to the Lead Safe API. If you have any questions, please contact <a href="mailto:HealthyHomes@cityofchicago.org">HealthyHomes@cityofchicago.org</a>.</p>
+<p>If your institution is interested in participating in the Lead Safe program, please fill-out the following application to the Chicago Department of Public Health. All applications must have a clinician and technical contact identified before application, meet the <a href="../eligibility-criteria/">eligibility requirements</a> and agree to the <a href="../tos/">terms of service</a>. Clinicians must be licensed doctors who will help their health network use Lead Safe as part of the hospital's daily operations. The technical contact should be able to work to connect electronic medical records to the Lead Safe API. If you have any questions, please contact <a href="mailto:HealthyHomes@cityofchicago.org">HealthyHomes@cityofchicago.org</a>.</p>
 
 <form method="POST" action="http://formspree.io/developers@cityofchicago.org">
   <h3>Please select from one of the eligible health networks</h3>
@@ -62,12 +62,12 @@
 
   <h3>Eligibility Criteria</h3>
 
-  <input type="checkbox" name="eligibility-criteria" value="certifies-eligibility">I have read the <a href="/eligibility-criteria/">eligibility criteria</a> and certify that this institution meets the minimum standards.
+  <input type="checkbox" name="eligibility-criteria" value="certifies-eligibility">I have read the <a href="../eligibility-criteria/">eligibility criteria</a> and certify that this institution meets the minimum standards.
   <br />
   
   <h3>Terms of Service</h3>
 
-  <input type="checkbox" name="accept-terms-of-service" value="accepts-terms-of-service">I accept the <a href="/tos/">Terms of Service</a><br />
+  <input type="checkbox" name="accept-terms-of-service" value="accepts-terms-of-service">I accept the <a href="../tos/">Terms of Service</a><br />
   <br />
   <button type="submit" class="btn">SUBMIT</button>
   <input type="hidden" name="_subject" value="Test submission: Lead Safe API Request" />

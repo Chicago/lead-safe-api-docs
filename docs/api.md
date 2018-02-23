@@ -1,12 +1,38 @@
 # API Documentation
 
 ## Submitting Patient Record
+
+### Authentication
+
+Submitting patient records to Lead Safe requires client credentials to retrieve a token, which is required for all API calls. City of Chicago will issue a client ID and a client secret ID which will be used to obtain a token.
+
+
+```bash
+GET --user CLIENT_ID:CLIENT_SECRET --data "grant_type=client_credentials" <url>/oauth/token
+```
+
+Successful requests for a token will return a JSON file similar to this:
+
+```json
+{"access_token":"TOKEN","token_type":"bearer","expires_in":3600}
+```
+
+Tokens are set to expire every 3,600 seconds (1 hour) and a new token will need to be obtained.
+
+To upload a patient record, the POST command must include a header called `Authorization: Bearer` followed by the TOKEN obtained in the previous steps.
+
+An upload would look like:
+
+```bash
+POST --header "Content-Type:application/json" --header "Authorization: Bearer TOKEN" FILE.JSON <url>/upload/insert/
+```
+
+The format for `FILE.JSON` is described in the next section.
+
+### Schema
  
 Submit a patient record and retrieve the estimated risk of having elevated blood-lead levels.
 
-```bash
-POST {json file} <url>/insert/
-```
 
 | Field           | Format   | Constraints                        | Notes                                                                                                             |
 |-----------------|----------|------------------------------------|-------------------------------------------------------------------------------------------------------------------|

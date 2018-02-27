@@ -1,6 +1,6 @@
 
 # Site Information
-site_name: Lead Safe API v0.6.0
+site_name: Lead Safe API v1.0.0-rc.1
 site_author: City of Chicago
 site_description: Lead Free API Documentation
 site_url: http://dev.cityofchicago.org/docs/lead-free
@@ -10,6 +10,7 @@ pages:
 
 - Home: index.md
 - 'Apply for Lead Safe': 'apply.md'
+- 'API Documentation': 'api.md'
 - 'FAQ about Lead Poisoning':
   - English: 'faq/lead-faq-en.md'
   - Español: 'faq/lead-faq-es.md'
@@ -18,7 +19,7 @@ pages:
 - 'Terms of Service': 'tos.md'
 
 # Copyright
-copyright: Copyright &copy; 2016-2017 <a href="http://www.cityofchicago.org">City of Chicago</a> and licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
+copyright: Copyright &copy; 2016-2018 <a href="http://www.cityofchicago.org">City of Chicago</a> and licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
 
 # Repository Information
 # repo_name: Chicago/open311-api-docs

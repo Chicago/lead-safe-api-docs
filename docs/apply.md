@@ -1,6 +1,6 @@
 <p>If your institution is interested in participating in the Lead Safe program, please fill-out the following application to the Chicago Department of Public Health. All applications must have a clinician and technical contact identified before application, meet the <a href="../eligibility-criteria/">eligibility requirements</a> and agree to the <a href="../tos/">terms of service</a>. Clinicians must be licensed doctors who will help their health network use Lead Safe as part of the hospital's daily operations. The technical contact should be able to work to connect electronic medical records to the Lead Safe API. If you have any questions, please contact <a href="mailto:HealthyHomes@cityofchicago.org">HealthyHomes@cityofchicago.org</a>.</p>
 
-<form method="POST" action="http://formspree.io/developers@cityofchicago.org">
+<form method="POST" action="http://formspree.io/healthyhomes@cityofchicago.org">
   <h3>Please select from one of the eligible health networks</h3>
   <select name="health-network" onchange="" onclick="return false;" class="selector">
     <option value="Advocate Christ Medical Center">Advocate Christ Medical Center, 4440 West 95th Street</option>

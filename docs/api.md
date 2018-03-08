@@ -96,7 +96,7 @@ Submit a patient record and retrieve the estimated risk of having elevated blood
 
 | Field            | Format   | Constraints                   | Notes/Questions                                                                            |
 |------------------|----------|-------------------------------|--------------------------------------------------------------------------------------------|
-| version          | Text     | "0.3.0"                       | Follows Semantic Versioning 2.0.0 http://semver.org/spec/v2.0.0.html                       |
+| version          | Text     | "1.0.0-rc.2"                  | Follows Semantic Versioning 2.0.0 http://semver.org/spec/v2.0.0.html                       |
 | timestamp        | TimeDate | yyyy-mm-dd hh:mm:ss.sss-hh:mm | Current Timestamp (RFC 3339 compliant date).                                               |
 | network_id       | Text     | <N/A\>                        | Parent entity - same value as submitted to the API.                                        |
 | clinic_id        | Text     | <N/A\>                        | Organization ID - same value as submitted to the API.                                      |

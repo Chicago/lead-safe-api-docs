@@ -107,7 +107,7 @@ Submit a patient record and retrieve the estimated risk of having elevated blood
 
 ```json
 {
-    "version": "0.3.0", 
+    "version": "1.0.0-rc.2", 
     "timestamp": "2017-08-11 19:20:29.000-00:00", 
     "network_id": "Alliance Health",
     "clinic_id": "EF",

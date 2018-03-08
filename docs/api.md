@@ -103,7 +103,7 @@ Submit a patient record and retrieve the estimated risk of having elevated blood
 | location_id      | Text     | <N/A\>                        | Specific Location Abbreviation in Centricity - same value as submitted to the API.         |
 | patient_id       | Text     | AlphaNumeric                  | Identifier for the patient - same value as submitted to the API.                           |
 | risk_score       | Text     | 9.99                          | Currently expecting numeric, future may be phrased by stating an odds ratio with the risk score. |
-| risk_score_notes | Text     | <N/A\>                        | Additional notes (referral, remediation funds, etc to be returned to provider )            |
+| risk_score_notes | Text     | <N/A\>                        | Notes and instructions for clinical staff based on `risk_score`. Notes with multiple lines will be semi-colon (;) delimited. |
 
 ```json
 {

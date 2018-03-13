@@ -6,6 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="referrer" content="origin" />
       
         <meta name="description" content="Lead Free API Documentation">
       
@@ -22,7 +23,7 @@
     
     
       
-        <title>API Documentation - Lead Safe API v1.0.0-rc.1</title>
+        <title>API Documentation - Lead Safe API v1.0.0-rc.2</title>
       
     
     
@@ -70,7 +71,7 @@
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <a href="http://dev.cityofchicago.org/docs/lead-free" title="Lead Safe API v1.0.0-rc.1" class="md-logo md-header-nav__button">
+          <a href="http://dev.cityofchicago.org/docs/lead-free" title="Lead Safe API v1.0.0-rc.2" class="md-logo md-header-nav__button">
             <img src="../assets/images/city-seal-inverse-small.png" width="24" height="24">
           </a>
         
@@ -136,7 +137,7 @@
         <img src="../assets/images/city-seal-inverse-small.png">
       </i>
     
-    Lead Safe API v1.0.0-rc.1
+    Lead Safe API v1.0.0-rc.2
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -739,7 +740,7 @@
 <tr>
 <td>version</td>
 <td>Text</td>
-<td>"0.3.0"</td>
+<td>"1.0.0-rc.2"</td>
 <td>Follows Semantic Versioning 2.0.0 http://semver.org/spec/v2.0.0.html</td>
 </tr>
 <tr>
@@ -782,12 +783,12 @@
 <td>risk_score_notes</td>
 <td>Text</td>
 <td>&lt;N/A></td>
-<td>Additional notes (referral, remediation funds, etc to be returned to provider )</td>
+<td>Notes and instructions for clinical staff based on <code>risk_score</code>. Notes with multiple lines will be semi-colon (;) delimited.</td>
 </tr>
 </tbody>
 </table>
 <pre><code class="json">{
-    &quot;version&quot;: &quot;0.3.0&quot;, 
+    &quot;version&quot;: &quot;1.0.0-rc.2&quot;, 
     &quot;timestamp&quot;: &quot;2017-08-11 19:20:29.000-00:00&quot;, 
     &quot;network_id&quot;: &quot;Alliance Health&quot;,
     &quot;clinic_id&quot;: &quot;EF&quot;,

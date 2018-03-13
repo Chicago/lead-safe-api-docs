@@ -96,18 +96,18 @@ Submit a patient record and retrieve the estimated risk of having elevated blood
 
 | Field            | Format   | Constraints                   | Notes/Questions                                                                            |
 |------------------|----------|-------------------------------|--------------------------------------------------------------------------------------------|
-| version          | Text     | "0.3.0"                       | Follows Semantic Versioning 2.0.0 http://semver.org/spec/v2.0.0.html                       |
+| version          | Text     | "1.0.0-rc.2"                  | Follows Semantic Versioning 2.0.0 http://semver.org/spec/v2.0.0.html                       |
 | timestamp        | TimeDate | yyyy-mm-dd hh:mm:ss.sss-hh:mm | Current Timestamp (RFC 3339 compliant date).                                               |
 | network_id       | Text     | <N/A\>                        | Parent entity - same value as submitted to the API.                                        |
 | clinic_id        | Text     | <N/A\>                        | Organization ID - same value as submitted to the API.                                      |
 | location_id      | Text     | <N/A\>                        | Specific Location Abbreviation in Centricity - same value as submitted to the API.         |
 | patient_id       | Text     | AlphaNumeric                  | Identifier for the patient - same value as submitted to the API.                           |
 | risk_score       | Text     | 9.99                          | Currently expecting numeric, future may be phrased by stating an odds ratio with the risk score. |
-| risk_score_notes | Text     | <N/A\>                        | Additional notes (referral, remediation funds, etc to be returned to provider )            |
+| risk_score_notes | Text     | <N/A\>                        | Notes and instructions for clinical staff based on `risk_score`. Notes with multiple lines will be semi-colon (;) delimited. |
 
 ```json
 {
-    "version": "0.3.0", 
+    "version": "1.0.0-rc.2", 
     "timestamp": "2017-08-11 19:20:29.000-00:00", 
     "network_id": "Alliance Health",
     "clinic_id": "EF",

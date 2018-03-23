@@ -1,3 +1,5 @@
+[![Build status](https://img.shields.io/travis/Chicago/lead-safe-api-docs/master.svg?style=flat-square&maxAge=2592000)](https://travis-ci.org/Chicago/lead-safe-api-docs)[![Version](https://img.shields.io/github/release/Chicago/lead-safe-api-docs.svg?maxAge=2592000&style=flat-square)](https://github.com/Chicago/lead-safe-api-docs/releases)
+
 # "Lead Safe" API Documentation
 
 ## Building and Testing

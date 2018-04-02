@@ -70,7 +70,7 @@
   <input type="checkbox" name="accept-terms-of-service" value="accepts-terms-of-service">I accept the <a href="../tos/">Terms of Service</a><br />
   <br />
   <button type="submit" class="btn">SUBMIT</button>
-  <input type="hidden" name="_subject" value="Test submission: Lead Safe API Request" />
+  <input type="hidden" name="_subject" value="Lead Safe API Request" />
   <input type="hidden" name="_cc" value="developers@cityofchicago.org" />
 
 </form>

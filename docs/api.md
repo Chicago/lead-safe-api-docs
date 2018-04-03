@@ -29,6 +29,10 @@ POST --header "Content-Type:application/json" --header "Authorization: Bearer TO
 
 The format for `FILE.JSON` is described in the next section.
 
+### Character Limit
+
+There is a 20,000 character limit for submissions.
+
 ### Schema
  
 Submit a patient record and retrieve the estimated risk of having elevated blood-lead levels.

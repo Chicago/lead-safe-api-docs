@@ -1,5 +1,6 @@
 language: ruby
 sudo: required
+dist: precise
 warnings_are_errors: true
 rvm:
   - 2.2

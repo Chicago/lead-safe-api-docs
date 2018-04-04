@@ -29,42 +29,47 @@ POST --header "Content-Type:application/json" --header "Authorization: Bearer TO
 
 The format for `FILE.JSON` is described in the next section.
 
+### Character Limit
+
+There is a 20,000 character limit for submissions.
+
 ### Schema
  
 Submit a patient record and retrieve the estimated risk of having elevated blood-lead levels.
 
 
-| Field           | Format   | Constraints                        | Notes                                                                                                             |
-|-----------------|----------|------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| timestamp       | TimeDate | yyyy-mm-dd hh:mm:ss.sss-hh:mm      | Current timestamp (RFC 3339 compliant date)                                                                       |
-| network_id      | Text     | <N/A\>                             | The parent entity of the submitting organization                                                                  |
-| clinic_id       | Text     | <N/A\>                             | Organization ID                                                                                                   |
-| location_id     | Text     | <N/A\>                             | Specific Location Abbreviation in Centricity                                                                      |
-| patient_id      | Text     | <N/A\>                             | AlphaNumeric patient identifier                                                                                   |
-| address1        | Text     | <N/A\>                             | Patient home address (street number, street direction, street name, street type)                                  |
-| address2        | Text     | <N/A\>                             | Patient home address (additional information, e.g. apartment number)                                              |
-| city            | Text     | <N/A\>                             | Patient home address city                                                                                         |
-| state           | Text     | <N/A\>                             | Patient home address state                                                                                        |
-| zip             | Text     | <N/A\>                             | Patient home address zip code                                                                                     |
-| date_of_birth   | Date     | yyyy-mm-dd                         | Patient date of birth                                                                                             |
-| gender          | Text     | M/F/U                              | Patient gender                                                                                                    |
-| race            | Text     | Code Values from Centricity        | Standard ONC Race definitions <br /> <br /> **Code / description** <br /> 1002-5 / American Indian or Alaska Native <br /> 2028-9 / Asian <br /> 2054-5 / Black or African American <br /> 2076-8 / Native Hawaiian or Other Pacific Islander <br /> 2106-3 / White <br /> UNK / Unknown |
-| ethnicity       | Text     | Code Values from Centricity        | Standard ONC Ethnicity definitions <br/> <br/> **Code / description** <br /> 2135-2 / Hispanic or Latino <br /> 2186-5 / Non-Hispanic or Latino <br /> UNK / Unknown |
-| VISIT ARRAY     |          |                                    | _Optional_ May entirely omit the array if visit history does not exist or is unavailable.  |
-| visit.visit_id  | Numeric  | 16 Digit GE ID                     | Unique GE ID for specific visit (DocumentID)                                                                      |
-| visit.date      | Date     | yyyy-mm-dd hh:mm:ss.sss-hh:mm      | Date of visit (RFC 3339 complient date)                                                                           |
-| visit.location  | Text     | <N/A\>                             | Text Abbreviation for facility of visit location                                                                  |
-| visit.provider  | Text     | <N/A\>                             | Full provider name, last name, or just NPI                                                                        |
-| LAB ARRAY       |          |                                    | _Optional_ May entirely omit the array if visit history does not exist or is unavailable.  |
-| lab.lab_id      | Numeric  | 16 Digit GE ID                     | Unique GE ID for specific lab result (ObsID)                                                                      |
-| lab.type        | Text     | "BLL"                              | Static BLL unless we identify additional labs to include                                                          |
-| lab.date        | Date     | yyyy-mm-dd                         | Date of lab results                                                                                               |
-| lab.sample_type | Text     | V/C                                | "V" Venous <br /> "C" for Capillary                                        |
-| lab.result      | Text     | <N/A\>                             | Several values are possible; integer, non-integer numeric, ranges indicated by alphanumeric text.                 |
+| Field              | Format   | Constraints                        | Notes                                                                                                             |
+|--------------------|----------|------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| timestamp          | TimeDate | yyyy-mm-dd hh:mm:ss.sss-hh:mm      | Current timestamp (RFC 3339 compliant date)                                                                       |
+| network_id         | Text     | <N/A\>                             | The parent entity of the submitting organization                                                                  |
+| clinic_id          | Text     | <N/A\>                             | Organization ID                                                                                                   |
+| location_id        | Text     | <N/A\>                             | Specific Location Abbreviation in Centricity                                                                      |
+| patient_id         | Text     | <N/A\>                             | AlphaNumeric patient identifier                                                                                   |
+| address1           | Text     | <N/A\>                             | Patient home address (street number, street direction, street name, street type)                                  |
+| address2           | Text     | <N/A\>                             | Patient home address (additional information, e.g. apartment number)                                              |
+| city               | Text     | <N/A\>                             | Patient home address city                                                                                         |
+| state              | Text     | <N/A\>                             | Patient home address state                                                                                        |
+| zip                | Text     | <N/A\>                             | Patient home address zip code                                                                                     |
+| date_of_birth      | Date     | yyyy-mm-dd                         | Patient date of birth                                                                                             |
+| expected_due_date  | Date     | yyyy-mm-dd                         | _Optional_ Expected due date, if applicable                                                                        |
+| gender             | Text     | M/F/U                              | Patient gender                                                                                                    |
+| race               | Text     | Code Values from Centricity        | Standard ONC Race definitions <br /> <br /> **Code / description** <br /> 1002-5 / American Indian or Alaska Native <br /> 2028-9 / Asian <br /> 2054-5 / Black or African American <br /> 2076-8 / Native Hawaiian or Other Pacific Islander <br /> 2106-3 / White <br /> UNK / Unknown |
+| ethnicity          | Text     | Code Values from Centricity        | Standard ONC Ethnicity definitions <br/> <br/> **Code / description** <br /> 2135-2 / Hispanic or Latino <br /> 2186-5 / Non-Hispanic or Latino <br /> UNK / Unknown |
+| VISIT ARRAY        |          |                                    | _Optional_ May entirely omit the array if visit history does not exist or is unavailable.  |
+| visit.visit_id     | Numeric  | 16 Digit GE ID                     | Unique GE ID for specific visit (DocumentID)                                                                      |
+| visit.date         | Date     | yyyy-mm-dd hh:mm:ss.sss-hh:mm      | Date of visit (RFC 3339 complient date)                                                                           |
+| visit.location     | Text     | <N/A\>                             | Text Abbreviation for facility of visit location                                                                  |
+| visit.provider     | Text     | <N/A\>                             | Full provider name, last name, or just NPI                                                                        |
+| LAB ARRAY          |          |                                    | _Optional_ May entirely omit the array if visit history does not exist or is unavailable.  |
+| lab.lab_id         | Numeric  | 16 Digit GE ID                     | Unique GE ID for specific lab result (ObsID)                                                                      |
+| lab.type           | Text     | "BLL"                              | Static BLL unless we identify additional labs to include                                                          |
+| lab.date           | Date     | yyyy-mm-dd                         | Date of lab results                                                                                               |
+| lab.sample_type    | Text     | V/C                                | "V" Venous <br /> "C" for Capillary                                        |
+| lab.result         | Text     | <N/A\>                             | Several values are possible; integer, non-integer numeric, ranges indicated by alphanumeric text.                 |
 
 ```json
 {
-  "timestamp": "2017-08-22 12:00:00.000-00:00", 
+  "timestamp": "2018-03-23 09:59:14.237-00:00", 
   "network_id": "Alliance Health",
   "clinic_id": "EF",
   "location_id": "examp_loc",
@@ -74,7 +79,8 @@ Submit a patient record and retrieve the estimated risk of having elevated blood
   "city": "Chicago", 
   "state": "IL", 
   "zip": "60653", 
-  "date_of_birth": "2013-07-24", 
+  "date_of_birth": "1988-03-17", 
+  "expected_due_date": "2018-07-24", 
   "gender": "F", 
   "race": "2054-5", 
   "ethnicity": "2186-5",
@@ -215,4 +221,4 @@ GET <url>/get/
 Elevated lead levels have severe impacts on a child's mental and physical development. When the API identifies elevated blood-lead levels, doctors are highly encouraged to conduct further blood tests
 
 !!! info "Follow-up after the blood test"
-	If elevated lead levels are confirmed by subsequent blood testing, the family has multiple options when deciding how to mitigate potential sources of lead poisoning: The City of Chicago has [limited grant funding](https://www.cityofchicago.org/city/en/depts/cdph/provdrs/inspections_and_permitting/svcs/apply_for_financialassistanceforleadabatement.html) to assist low-income homeowners and landlords of affordable housing to eliminate lead hazards. Local non-profits, such as (INSERT NAME OF NON-PROFITS). Families who rent their home from a landlord can also contact the City of Chicago for inspectors to inspect their homes for potential sources of lead poisoning. Families may dial 311 for further assistance.
+	If elevated lead levels are confirmed by subsequent blood testing, the family has multiple options when deciding how to mitigate potential sources of lead poisoning: The City of Chicago has [limited grant funding](https://www.cityofchicago.org/city/en/depts/cdph/provdrs/healthy_homes/svcs/apply_for_financialassistanceforleadabatement.html) to assist low-income homeowners and landlords of affordable housing to eliminate lead hazards. Families who rent their home from a landlord can also contact the City of Chicago for inspectors to inspect their homes for potential sources of lead poisoning. Families may dial 311 for further assistance or contact CDPH at 312-747-LEAD(5323).

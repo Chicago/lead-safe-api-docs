@@ -12,6 +12,10 @@ notifications:
     on_success: change
     on_failure: change
 
+before_deploy:
+  # Fix s3 deploy issues https://github.com/travis-ci/travis-ci/issues/4776
+  - rvm 1.9.3 do gem install aws-sdk -v 2.1.36
+
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
